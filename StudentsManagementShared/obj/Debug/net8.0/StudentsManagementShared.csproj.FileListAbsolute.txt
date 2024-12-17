@@ -9,3 +9,4 @@ D:\dev\StudentsManagementBlazor\StudentsManagementShared\obj\Debug\net8.0\Studen
 D:\dev\StudentsManagementBlazor\StudentsManagementShared\obj\Debug\net8.0\refint\StudentsManagementShared.dll
 D:\dev\StudentsManagementBlazor\StudentsManagementShared\obj\Debug\net8.0\StudentsManagementShared.pdb
 D:\dev\StudentsManagementBlazor\StudentsManagementShared\obj\Debug\net8.0\ref\StudentsManagementShared.dll
+D:\dev\StudentsManagementBlazor\StudentsManagementShared\obj\Debug\net8.0\StudentsManagementShared.sourcelink.json

@@ -1,7 +1,16 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "D:\\dev\\StudentsManagementBlazor\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{1382402D-36E1-4766-AE2B-5B78D0DB2931}|StudentsManagementBlazor\\StudentsManagementBlazor\\StudentsManagementBlazor.csproj|d:\\dev\\studentsmanagementblazor\\studentsmanagementblazor\\studentsmanagementblazor\\controllers\\systemcodedetailscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1382402D-36E1-4766-AE2B-5B78D0DB2931}|StudentsManagementBlazor\\StudentsManagementBlazor\\StudentsManagementBlazor.csproj|solutionrelative:studentsmanagementblazor\\studentsmanagementblazor\\controllers\\systemcodedetailscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1382402D-36E1-4766-AE2B-5B78D0DB2931}|StudentsManagementBlazor\\StudentsManagementBlazor\\StudentsManagementBlazor.csproj|d:\\dev\\studentsmanagementblazor\\studentsmanagementblazor\\studentsmanagementblazor\\controllers\\systemcodescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1382402D-36E1-4766-AE2B-5B78D0DB2931}|StudentsManagementBlazor\\StudentsManagementBlazor\\StudentsManagementBlazor.csproj|solutionrelative:studentsmanagementblazor\\studentsmanagementblazor\\controllers\\systemcodescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,7 +18,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -18,6 +27,32 @@
             {
               "$type": "Bookmark",
               "Name": "ST:2:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "SystemCodeDetailsController.cs",
+              "DocumentMoniker": "D:\\dev\\StudentsManagementBlazor\\StudentsManagementBlazor\\StudentsManagementBlazor\\Controllers\\SystemCodeDetailsController.cs",
+              "RelativeDocumentMoniker": "StudentsManagementBlazor\\StudentsManagementBlazor\\Controllers\\SystemCodeDetailsController.cs",
+              "ToolTip": "D:\\dev\\StudentsManagementBlazor\\StudentsManagementBlazor\\StudentsManagementBlazor\\Controllers\\SystemCodeDetailsController.cs",
+              "RelativeToolTip": "StudentsManagementBlazor\\StudentsManagementBlazor\\Controllers\\SystemCodeDetailsController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-17T12:49:57.88Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "SystemCodesController.cs",
+              "DocumentMoniker": "D:\\dev\\StudentsManagementBlazor\\StudentsManagementBlazor\\StudentsManagementBlazor\\Controllers\\SystemCodesController.cs",
+              "RelativeDocumentMoniker": "StudentsManagementBlazor\\StudentsManagementBlazor\\Controllers\\SystemCodesController.cs",
+              "ToolTip": "D:\\dev\\StudentsManagementBlazor\\StudentsManagementBlazor\\StudentsManagementBlazor\\Controllers\\SystemCodesController.cs",
+              "RelativeToolTip": "StudentsManagementBlazor\\StudentsManagementBlazor\\Controllers\\SystemCodesController.cs",
+              "ViewState": "AgIAAGAAAAAAAAAAAAAmwGoAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-17T12:40:24.566Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Bookmark",

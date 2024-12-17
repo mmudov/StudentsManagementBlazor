@@ -287,8 +287,6 @@ D:\dev\StudentsManagementBlazor\StudentsManagementBlazor\StudentsManagementBlazo
 D:\dev\StudentsManagementBlazor\StudentsManagementBlazor\StudentsManagementBlazor\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.Scripting.resources.dll
 D:\dev\StudentsManagementBlazor\StudentsManagementBlazor\StudentsManagementBlazor\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.Scripting.resources.dll
 D:\dev\StudentsManagementBlazor\StudentsManagementBlazor\StudentsManagementBlazor\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.Scripting.resources.dll
-D:\dev\StudentsManagementBlazor\StudentsManagementBlazor\StudentsManagementBlazor\bin\Debug\net8.0\StudentsManagementShared.dll
-D:\dev\StudentsManagementBlazor\StudentsManagementBlazor\StudentsManagementBlazor\bin\Debug\net8.0\StudentsManagementShared.pdb
 D:\dev\StudentsManagementBlazor\StudentsManagementBlazor\StudentsManagementBlazor\bin\Debug\net8.0\Microsoft.Win32.SystemEvents.dll
 D:\dev\StudentsManagementBlazor\StudentsManagementBlazor\StudentsManagementBlazor\bin\Debug\net8.0\System.Drawing.Common.dll
 D:\dev\StudentsManagementBlazor\StudentsManagementBlazor\StudentsManagementBlazor\bin\Debug\net8.0\System.Security.Permissions.dll
@@ -297,3 +295,6 @@ D:\dev\StudentsManagementBlazor\StudentsManagementBlazor\StudentsManagementBlazo
 D:\dev\StudentsManagementBlazor\StudentsManagementBlazor\StudentsManagementBlazor\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Drawing.Common.dll
 D:\dev\StudentsManagementBlazor\StudentsManagementBlazor\StudentsManagementBlazor\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Security.Cryptography.ProtectedData.dll
 D:\dev\StudentsManagementBlazor\StudentsManagementBlazor\StudentsManagementBlazor\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Windows.Extensions.dll
+D:\dev\StudentsManagementBlazor\StudentsManagementBlazor\StudentsManagementBlazor\obj\Debug\net8.0\StudentsManagementBlazor.sourcelink.json
+D:\dev\StudentsManagementBlazor\StudentsManagementBlazor\StudentsManagementBlazor\bin\Debug\net8.0\StudentsManagementShared.dll
+D:\dev\StudentsManagementBlazor\StudentsManagementBlazor\StudentsManagementBlazor\bin\Debug\net8.0\StudentsManagementShared.pdb
