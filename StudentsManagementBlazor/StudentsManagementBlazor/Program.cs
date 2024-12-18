@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using StudentsManagementBlazor.Client.Pages;
+using StudentsManagementBlazor.Client.Services;
 using StudentsManagementBlazor.Components;
 using StudentsManagementBlazor.Components.Account;
 using StudentsManagementBlazor.Data;
@@ -52,6 +53,8 @@ namespace StudentsManagementBlazor
             {
                 BaseAddress = new Uri(builder.Configuration.GetSection("BaseAddress").Value!)
             });
+
+            builder.Services.AddScoped<ICountryRepository, CountryRespository>();
 
             var app = builder.Build();
 

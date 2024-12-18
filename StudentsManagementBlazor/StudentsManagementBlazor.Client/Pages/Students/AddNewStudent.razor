@@ -1,6 +1,7 @@
 ﻿@page "/add-student"
 @using StudentsManagementBlazor.Client.Services;
 @using StudentsManagementBlazor.Shared.Models
+@using StudentsManagementShared.Models
 @inject NavigationManager navigation;
 @inject IJSRuntime JsRuntime
 
@@ -58,7 +59,14 @@
 					<div class="col-md-6">
 						<div class="form-group">
 							<label class="control-label">Student Country</label>
-							<InputText for="Country" class="form-control" @bind-Value="@studobj.Country" />
+							<!--<InputText for="Country" class="form-control" @bind-Value="@studobj.Country" />-->
+							<InputSelect for="Country" class="form-control" @bind-Value="@studobj.Country">
+								<option value="">Select Country</option>
+								@foreach(var country in Countries)
+								{
+									<option value="@country.Name">@country.Name</option>
+								}
+							</InputSelect>
 							<ValidationMessage For="()=>studobj.Country" />
 						</div>
 					</div>
@@ -75,6 +83,13 @@
 @code {
 	[SupplyParameterFromForm]
 	public Student studobj { get; set; } = new();
+
+	List<Country> Countries = new List<Country>();
+
+	protected override async Task OnInitializedAsync()
+	{
+		Countries = await CountryService.GetAllAsync();
+	}
 
 	protected async Task CreateStudent()
 	{

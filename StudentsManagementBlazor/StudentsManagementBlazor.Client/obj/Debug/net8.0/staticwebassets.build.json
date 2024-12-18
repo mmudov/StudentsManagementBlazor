@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "l8sRlfqA0xUXw7JI+kURWl1KwDD5hT1tdsGpNh1Nheo=",
+  "Hash": "AWW99v+ct8D2a9AyElkcfQW1BB/O7uk2xcmETaak8Mw=",
   "Source": "StudentsManagementBlazor.Client",
   "BasePath": "/",
   "Mode": "Default",
@@ -52,8 +52,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "WasmResource",
       "AssetTraitValue": "manifest",
-      "Fingerprint": "hfu4qnl5ac",
-      "Integrity": "DRmQdeljpJshGpsUpurmqAn1TAt+Ilwbs6gztN2N3oA=",
+      "Fingerprint": "3vpnhl5bh5",
+      "Integrity": "Uegeb+No/1KXkl+8vCI0MHyNpAdIxuUJm6bb3PWFzP8=",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "obj\\Debug\\net8.0\\blazor.boot.json"
@@ -955,8 +955,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "WasmResource",
       "AssetTraitValue": "symbol",
-      "Fingerprint": "ag4yx8j0d4",
-      "Integrity": "9qP5Zok8+OvnzX9FVimToCiDpNkuRW1YzyvvFy9sBNM=",
+      "Fingerprint": "pi357ilqy2",
+      "Integrity": "759wVtELFfiOiT75slz59EIfEJpo08U4KicoBLsyZfc=",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "obj\\Debug\\net8.0\\StudentsManagementBlazor.Client.pdb"
@@ -976,8 +976,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "WasmResource",
       "AssetTraitValue": "runtime",
-      "Fingerprint": "eghbgyfzrk",
-      "Integrity": "HrW7pRuFuvJmvLy0RZ15X+BLdyipAHIAtcEietlONj4=",
+      "Fingerprint": "rhz80uwdza",
+      "Integrity": "r90rZHX/aj5n95jHWzl4nkRU9VxDvRZnejOnI6Q1Yvw=",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "D:\\dev\\StudentsManagementBlazor\\StudentsManagementBlazor\\StudentsManagementBlazor.Client\\obj\\Debug\\net8.0\\webcil\\StudentsManagementBlazor.Client.wasm"
@@ -997,8 +997,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "WasmResource",
       "AssetTraitValue": "symbol",
-      "Fingerprint": "1w7diaymea",
-      "Integrity": "McPAYUlcWQ5/2mAV8tJO2+OpkJDzUt+aOI3cnrHB198=",
+      "Fingerprint": "0tywkonqwi",
+      "Integrity": "zKODSHbNieH8YLxiA60eRcWyKJCzOwC02cG4uCMmrSM=",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "D:\\dev\\StudentsManagementBlazor\\StudentsManagementShared\\bin\\Debug\\net8.0\\StudentsManagementShared.pdb"
@@ -1018,8 +1018,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "WasmResource",
       "AssetTraitValue": "runtime",
-      "Fingerprint": "dunzikkyg1",
-      "Integrity": "i7ru6JqrF+PQpNDsbDMlascckWc03nVMBtlDFry+a88=",
+      "Fingerprint": "fb1britf5b",
+      "Integrity": "a+5GRypGWY44/54PHqfqsAWOIgWJprBIq0GyG1KqWp0=",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "D:\\dev\\StudentsManagementBlazor\\StudentsManagementBlazor\\StudentsManagementBlazor.Client\\obj\\Debug\\net8.0\\webcil\\StudentsManagementShared.wasm"
@@ -5099,7 +5099,7 @@
       "OriginalItemSpec": "D:\\dev\\StudentsManagementBlazor\\StudentsManagementBlazor\\StudentsManagementBlazor.Client\\bin\\Debug\\net8.0\\wwwroot\\_framework\\Microsoft.CSharp.wasm"
     },
     {
-      "Identity": "D:\\dev\\StudentsManagementBlazor\\StudentsManagementBlazor\\StudentsManagementBlazor.Client\\obj\\Debug\\net8.0\\compressed\\77bijhoply-ag4yx8j0d4.gz",
+      "Identity": "D:\\dev\\StudentsManagementBlazor\\StudentsManagementBlazor\\StudentsManagementBlazor.Client\\obj\\Debug\\net8.0\\compressed\\77bijhoply-pi357ilqy2.gz",
       "SourceId": "StudentsManagementBlazor.Client",
       "SourceType": "Computed",
       "ContentRoot": "D:\\dev\\StudentsManagementBlazor\\StudentsManagementBlazor\\StudentsManagementBlazor.Client\\obj\\Debug\\net8.0\\compressed\\",
@@ -5113,8 +5113,8 @@
       "RelatedAsset": "D:\\dev\\StudentsManagementBlazor\\StudentsManagementBlazor\\StudentsManagementBlazor.Client\\bin\\Debug\\net8.0\\wwwroot\\_framework\\StudentsManagementBlazor.Client.pdb",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
-      "Fingerprint": "3mo1w0xvz2",
-      "Integrity": "2yKLdgSIfxdkmRDvwAhEJ0Ruih8Q1UyGvjkMWzjlnzc=",
+      "Fingerprint": "dlpatu375r",
+      "Integrity": "EQXglb7CIDFWGry4aDo9eiCF/YBOx5B4OCsmhhFvqiQ=",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "D:\\dev\\StudentsManagementBlazor\\StudentsManagementBlazor\\StudentsManagementBlazor.Client\\bin\\Debug\\net8.0\\wwwroot\\_framework\\StudentsManagementBlazor.Client.pdb"
@@ -7031,7 +7031,7 @@
       "OriginalItemSpec": "D:\\dev\\StudentsManagementBlazor\\StudentsManagementBlazor\\StudentsManagementBlazor.Client\\bin\\Debug\\net8.0\\wwwroot\\_framework\\System.Security.Cryptography.Encoding.wasm"
     },
     {
-      "Identity": "D:\\dev\\StudentsManagementBlazor\\StudentsManagementBlazor\\StudentsManagementBlazor.Client\\obj\\Debug\\net8.0\\compressed\\jquwy9x6rh-dunzikkyg1.gz",
+      "Identity": "D:\\dev\\StudentsManagementBlazor\\StudentsManagementBlazor\\StudentsManagementBlazor.Client\\obj\\Debug\\net8.0\\compressed\\jquwy9x6rh-fb1britf5b.gz",
       "SourceId": "StudentsManagementBlazor.Client",
       "SourceType": "Computed",
       "ContentRoot": "D:\\dev\\StudentsManagementBlazor\\StudentsManagementBlazor\\StudentsManagementBlazor.Client\\obj\\Debug\\net8.0\\compressed\\",
@@ -7045,8 +7045,8 @@
       "RelatedAsset": "D:\\dev\\StudentsManagementBlazor\\StudentsManagementBlazor\\StudentsManagementBlazor.Client\\bin\\Debug\\net8.0\\wwwroot\\_framework\\StudentsManagementShared.wasm",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
-      "Fingerprint": "udy3jqynny",
-      "Integrity": "LrRKViNfE4e9fXUTW4MAxQnPUTjo3CqrKOMqaS81lls=",
+      "Fingerprint": "ah714d4n3z",
+      "Integrity": "HrQUzgWKXZAZppT665UDaSd6sWVtkpa+pQ0jFECcfqk=",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "D:\\dev\\StudentsManagementBlazor\\StudentsManagementBlazor\\StudentsManagementBlazor.Client\\bin\\Debug\\net8.0\\wwwroot\\_framework\\StudentsManagementShared.wasm"
@@ -7850,7 +7850,7 @@
       "OriginalItemSpec": "D:\\dev\\StudentsManagementBlazor\\StudentsManagementBlazor\\StudentsManagementBlazor.Client\\bin\\Debug\\net8.0\\wwwroot\\_framework\\System.Collections.Specialized.wasm"
     },
     {
-      "Identity": "D:\\dev\\StudentsManagementBlazor\\StudentsManagementBlazor\\StudentsManagementBlazor.Client\\obj\\Debug\\net8.0\\compressed\\qswxb8kije-1w7diaymea.gz",
+      "Identity": "D:\\dev\\StudentsManagementBlazor\\StudentsManagementBlazor\\StudentsManagementBlazor.Client\\obj\\Debug\\net8.0\\compressed\\qswxb8kije-0tywkonqwi.gz",
       "SourceId": "StudentsManagementBlazor.Client",
       "SourceType": "Computed",
       "ContentRoot": "D:\\dev\\StudentsManagementBlazor\\StudentsManagementBlazor\\StudentsManagementBlazor.Client\\obj\\Debug\\net8.0\\compressed\\",
@@ -7864,8 +7864,8 @@
       "RelatedAsset": "D:\\dev\\StudentsManagementBlazor\\StudentsManagementBlazor\\StudentsManagementBlazor.Client\\bin\\Debug\\net8.0\\wwwroot\\_framework\\StudentsManagementShared.pdb",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
-      "Fingerprint": "hsf8759mfv",
-      "Integrity": "8azK+AK2UKIzXW+cl03cCo1TEVe2hw+sjnVRtP6x5n8=",
+      "Fingerprint": "l9p9g7cblf",
+      "Integrity": "KfRNuMvw10BbNpu1Sn/EeR5o0rOuJKuQA+etrbolhxw=",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "D:\\dev\\StudentsManagementBlazor\\StudentsManagementBlazor\\StudentsManagementBlazor.Client\\bin\\Debug\\net8.0\\wwwroot\\_framework\\StudentsManagementShared.pdb"
@@ -8144,7 +8144,7 @@
       "OriginalItemSpec": "D:\\dev\\StudentsManagementBlazor\\StudentsManagementBlazor\\StudentsManagementBlazor.Client\\bin\\Debug\\net8.0\\wwwroot\\_framework\\System.Xml.Serialization.wasm"
     },
     {
-      "Identity": "D:\\dev\\StudentsManagementBlazor\\StudentsManagementBlazor\\StudentsManagementBlazor.Client\\obj\\Debug\\net8.0\\compressed\\u3c38ay9ci-eghbgyfzrk.gz",
+      "Identity": "D:\\dev\\StudentsManagementBlazor\\StudentsManagementBlazor\\StudentsManagementBlazor.Client\\obj\\Debug\\net8.0\\compressed\\u3c38ay9ci-rhz80uwdza.gz",
       "SourceId": "StudentsManagementBlazor.Client",
       "SourceType": "Computed",
       "ContentRoot": "D:\\dev\\StudentsManagementBlazor\\StudentsManagementBlazor\\StudentsManagementBlazor.Client\\obj\\Debug\\net8.0\\compressed\\",
@@ -8158,8 +8158,8 @@
       "RelatedAsset": "D:\\dev\\StudentsManagementBlazor\\StudentsManagementBlazor\\StudentsManagementBlazor.Client\\bin\\Debug\\net8.0\\wwwroot\\_framework\\StudentsManagementBlazor.Client.wasm",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
-      "Fingerprint": "3pitve3trt",
-      "Integrity": "GRWC6sLctMvY+ts8V7VjAlXsgSNIk/KjyyK2CfRIsKg=",
+      "Fingerprint": "zn3711ncer",
+      "Integrity": "sTyHhh0QBwmn7pNXChLVuPatpmFUTA5BQbyj4E4TnhI=",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "D:\\dev\\StudentsManagementBlazor\\StudentsManagementBlazor\\StudentsManagementBlazor.Client\\bin\\Debug\\net8.0\\wwwroot\\_framework\\StudentsManagementBlazor.Client.wasm"
@@ -8438,7 +8438,7 @@
       "OriginalItemSpec": "D:\\dev\\StudentsManagementBlazor\\StudentsManagementBlazor\\StudentsManagementBlazor.Client\\bin\\Debug\\net8.0\\wwwroot\\_framework\\System.Net.ServicePoint.wasm"
     },
     {
-      "Identity": "D:\\dev\\StudentsManagementBlazor\\StudentsManagementBlazor\\StudentsManagementBlazor.Client\\obj\\Debug\\net8.0\\compressed\\va4nsgi3dl-hfu4qnl5ac.gz",
+      "Identity": "D:\\dev\\StudentsManagementBlazor\\StudentsManagementBlazor\\StudentsManagementBlazor.Client\\obj\\Debug\\net8.0\\compressed\\va4nsgi3dl-3vpnhl5bh5.gz",
       "SourceId": "StudentsManagementBlazor.Client",
       "SourceType": "Computed",
       "ContentRoot": "D:\\dev\\StudentsManagementBlazor\\StudentsManagementBlazor\\StudentsManagementBlazor.Client\\obj\\Debug\\net8.0\\compressed\\",
@@ -8452,8 +8452,8 @@
       "RelatedAsset": "D:\\dev\\StudentsManagementBlazor\\StudentsManagementBlazor\\StudentsManagementBlazor.Client\\bin\\Debug\\net8.0\\wwwroot\\_framework\\blazor.boot.json",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
-      "Fingerprint": "4kyasj7nce",
-      "Integrity": "jDprHr5TcZqj5xMHh4Aa88LYky7gQae8nO/aPsF7ZTY=",
+      "Fingerprint": "lcnx0k811v",
+      "Integrity": "dYSwwkFMHmxNKisSalK6zJRKlCGDqBLyKc9v6jYsNyw=",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "D:\\dev\\StudentsManagementBlazor\\StudentsManagementBlazor\\StudentsManagementBlazor.Client\\bin\\Debug\\net8.0\\wwwroot\\_framework\\blazor.boot.json"
@@ -8915,11 +8915,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"DRmQdeljpJshGpsUpurmqAn1TAt+Ilwbs6gztN2N3oA=\""
+          "Value": "\"Uegeb+No/1KXkl+8vCI0MHyNpAdIxuUJm6bb3PWFzP8=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 17 Dec 2024 10:31:44 GMT"
+          "Value": "Wed, 18 Dec 2024 12:00:09 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -8929,18 +8929,18 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-DRmQdeljpJshGpsUpurmqAn1TAt+Ilwbs6gztN2N3oA="
+          "Value": "sha256-Uegeb+No/1KXkl+8vCI0MHyNpAdIxuUJm6bb3PWFzP8="
         }
       ]
     },
     {
       "Route": "_framework/blazor.boot.json",
-      "AssetFile": "D:\\dev\\StudentsManagementBlazor\\StudentsManagementBlazor\\StudentsManagementBlazor.Client\\obj\\Debug\\net8.0\\compressed\\va4nsgi3dl-hfu4qnl5ac.gz",
+      "AssetFile": "D:\\dev\\StudentsManagementBlazor\\StudentsManagementBlazor\\StudentsManagementBlazor.Client\\obj\\Debug\\net8.0\\compressed\\va4nsgi3dl-3vpnhl5bh5.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.000110156422"
+          "Quality": "0.000110107906"
         }
       ],
       "ResponseHeaders": [
@@ -8950,15 +8950,15 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "9077"
+          "Value": "9081"
         },
         {
           "Name": "ETag",
-          "Value": "\"jDprHr5TcZqj5xMHh4Aa88LYky7gQae8nO/aPsF7ZTY=\""
+          "Value": "\"dYSwwkFMHmxNKisSalK6zJRKlCGDqBLyKc9v6jYsNyw=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 17 Dec 2024 10:23:19 GMT"
+          "Value": "Wed, 18 Dec 2024 11:56:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -8978,19 +8978,19 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"DRmQdeljpJshGpsUpurmqAn1TAt+Ilwbs6gztN2N3oA=\""
+          "Value": "W/\"Uegeb+No/1KXkl+8vCI0MHyNpAdIxuUJm6bb3PWFzP8=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-DRmQdeljpJshGpsUpurmqAn1TAt+Ilwbs6gztN2N3oA="
+          "Value": "sha256-Uegeb+No/1KXkl+8vCI0MHyNpAdIxuUJm6bb3PWFzP8="
         }
       ]
     },
     {
       "Route": "_framework/blazor.boot.json.gz",
-      "AssetFile": "D:\\dev\\StudentsManagementBlazor\\StudentsManagementBlazor\\StudentsManagementBlazor.Client\\obj\\Debug\\net8.0\\compressed\\va4nsgi3dl-hfu4qnl5ac.gz",
+      "AssetFile": "D:\\dev\\StudentsManagementBlazor\\StudentsManagementBlazor\\StudentsManagementBlazor.Client\\obj\\Debug\\net8.0\\compressed\\va4nsgi3dl-3vpnhl5bh5.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -8999,7 +8999,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "9077"
+          "Value": "9081"
         },
         {
           "Name": "Content-Type",
@@ -9007,11 +9007,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"jDprHr5TcZqj5xMHh4Aa88LYky7gQae8nO/aPsF7ZTY=\""
+          "Value": "\"dYSwwkFMHmxNKisSalK6zJRKlCGDqBLyKc9v6jYsNyw=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 17 Dec 2024 10:23:19 GMT"
+          "Value": "Wed, 18 Dec 2024 11:56:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -9029,7 +9029,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-jDprHr5TcZqj5xMHh4Aa88LYky7gQae8nO/aPsF7ZTY="
+          "Value": "sha256-dYSwwkFMHmxNKisSalK6zJRKlCGDqBLyKc9v6jYsNyw="
         }
       ]
     },
@@ -14798,7 +14798,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "40300"
+          "Value": "48632"
         },
         {
           "Name": "Content-Type",
@@ -14806,11 +14806,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"9qP5Zok8+OvnzX9FVimToCiDpNkuRW1YzyvvFy9sBNM=\""
+          "Value": "\"759wVtELFfiOiT75slz59EIfEJpo08U4KicoBLsyZfc=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 17 Dec 2024 10:31:41 GMT"
+          "Value": "Wed, 18 Dec 2024 12:00:08 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -14820,18 +14820,18 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-9qP5Zok8+OvnzX9FVimToCiDpNkuRW1YzyvvFy9sBNM="
+          "Value": "sha256-759wVtELFfiOiT75slz59EIfEJpo08U4KicoBLsyZfc="
         }
       ]
     },
     {
       "Route": "_framework/StudentsManagementBlazor.Client.pdb",
-      "AssetFile": "D:\\dev\\StudentsManagementBlazor\\StudentsManagementBlazor\\StudentsManagementBlazor.Client\\obj\\Debug\\net8.0\\compressed\\77bijhoply-ag4yx8j0d4.gz",
+      "AssetFile": "D:\\dev\\StudentsManagementBlazor\\StudentsManagementBlazor\\StudentsManagementBlazor.Client\\obj\\Debug\\net8.0\\compressed\\77bijhoply-pi357ilqy2.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.000032766473"
+          "Quality": "0.000027057741"
         }
       ],
       "ResponseHeaders": [
@@ -14841,15 +14841,15 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "30518"
+          "Value": "36957"
         },
         {
           "Name": "ETag",
-          "Value": "\"2yKLdgSIfxdkmRDvwAhEJ0Ruih8Q1UyGvjkMWzjlnzc=\""
+          "Value": "\"EQXglb7CIDFWGry4aDo9eiCF/YBOx5B4OCsmhhFvqiQ=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 17 Dec 2024 10:23:16 GMT"
+          "Value": "Wed, 18 Dec 2024 11:56:43 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -14869,19 +14869,19 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"9qP5Zok8+OvnzX9FVimToCiDpNkuRW1YzyvvFy9sBNM=\""
+          "Value": "W/\"759wVtELFfiOiT75slz59EIfEJpo08U4KicoBLsyZfc=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-9qP5Zok8+OvnzX9FVimToCiDpNkuRW1YzyvvFy9sBNM="
+          "Value": "sha256-759wVtELFfiOiT75slz59EIfEJpo08U4KicoBLsyZfc="
         }
       ]
     },
     {
       "Route": "_framework/StudentsManagementBlazor.Client.pdb.gz",
-      "AssetFile": "D:\\dev\\StudentsManagementBlazor\\StudentsManagementBlazor\\StudentsManagementBlazor.Client\\obj\\Debug\\net8.0\\compressed\\77bijhoply-ag4yx8j0d4.gz",
+      "AssetFile": "D:\\dev\\StudentsManagementBlazor\\StudentsManagementBlazor\\StudentsManagementBlazor.Client\\obj\\Debug\\net8.0\\compressed\\77bijhoply-pi357ilqy2.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -14890,7 +14890,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "30518"
+          "Value": "36957"
         },
         {
           "Name": "Content-Type",
@@ -14898,11 +14898,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"2yKLdgSIfxdkmRDvwAhEJ0Ruih8Q1UyGvjkMWzjlnzc=\""
+          "Value": "\"EQXglb7CIDFWGry4aDo9eiCF/YBOx5B4OCsmhhFvqiQ=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 17 Dec 2024 10:23:16 GMT"
+          "Value": "Wed, 18 Dec 2024 11:56:43 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -14920,7 +14920,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-2yKLdgSIfxdkmRDvwAhEJ0Ruih8Q1UyGvjkMWzjlnzc="
+          "Value": "sha256-EQXglb7CIDFWGry4aDo9eiCF/YBOx5B4OCsmhhFvqiQ="
         }
       ]
     },
@@ -14935,7 +14935,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "54549"
+          "Value": "72469"
         },
         {
           "Name": "Content-Type",
@@ -14943,11 +14943,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"HrW7pRuFuvJmvLy0RZ15X+BLdyipAHIAtcEietlONj4=\""
+          "Value": "\"r90rZHX/aj5n95jHWzl4nkRU9VxDvRZnejOnI6Q1Yvw=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 17 Dec 2024 10:23:17 GMT"
+          "Value": "Wed, 18 Dec 2024 12:00:08 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -14957,18 +14957,18 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-HrW7pRuFuvJmvLy0RZ15X+BLdyipAHIAtcEietlONj4="
+          "Value": "sha256-r90rZHX/aj5n95jHWzl4nkRU9VxDvRZnejOnI6Q1Yvw="
         }
       ]
     },
     {
       "Route": "_framework/StudentsManagementBlazor.Client.wasm",
-      "AssetFile": "D:\\dev\\StudentsManagementBlazor\\StudentsManagementBlazor\\StudentsManagementBlazor.Client\\obj\\Debug\\net8.0\\compressed\\u3c38ay9ci-eghbgyfzrk.gz",
+      "AssetFile": "D:\\dev\\StudentsManagementBlazor\\StudentsManagementBlazor\\StudentsManagementBlazor.Client\\obj\\Debug\\net8.0\\compressed\\u3c38ay9ci-rhz80uwdza.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.000057058085"
+          "Quality": "0.000043523677"
         }
       ],
       "ResponseHeaders": [
@@ -14978,15 +14978,15 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "17525"
+          "Value": "22975"
         },
         {
           "Name": "ETag",
-          "Value": "\"GRWC6sLctMvY+ts8V7VjAlXsgSNIk/KjyyK2CfRIsKg=\""
+          "Value": "\"sTyHhh0QBwmn7pNXChLVuPatpmFUTA5BQbyj4E4TnhI=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 17 Dec 2024 10:23:17 GMT"
+          "Value": "Wed, 18 Dec 2024 11:56:43 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -15006,19 +15006,19 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"HrW7pRuFuvJmvLy0RZ15X+BLdyipAHIAtcEietlONj4=\""
+          "Value": "W/\"r90rZHX/aj5n95jHWzl4nkRU9VxDvRZnejOnI6Q1Yvw=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-HrW7pRuFuvJmvLy0RZ15X+BLdyipAHIAtcEietlONj4="
+          "Value": "sha256-r90rZHX/aj5n95jHWzl4nkRU9VxDvRZnejOnI6Q1Yvw="
         }
       ]
     },
     {
       "Route": "_framework/StudentsManagementBlazor.Client.wasm.gz",
-      "AssetFile": "D:\\dev\\StudentsManagementBlazor\\StudentsManagementBlazor\\StudentsManagementBlazor.Client\\obj\\Debug\\net8.0\\compressed\\u3c38ay9ci-eghbgyfzrk.gz",
+      "AssetFile": "D:\\dev\\StudentsManagementBlazor\\StudentsManagementBlazor\\StudentsManagementBlazor.Client\\obj\\Debug\\net8.0\\compressed\\u3c38ay9ci-rhz80uwdza.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -15027,7 +15027,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "17525"
+          "Value": "22975"
         },
         {
           "Name": "Content-Type",
@@ -15035,11 +15035,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"GRWC6sLctMvY+ts8V7VjAlXsgSNIk/KjyyK2CfRIsKg=\""
+          "Value": "\"sTyHhh0QBwmn7pNXChLVuPatpmFUTA5BQbyj4E4TnhI=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 17 Dec 2024 10:23:17 GMT"
+          "Value": "Wed, 18 Dec 2024 11:56:43 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -15057,7 +15057,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-GRWC6sLctMvY+ts8V7VjAlXsgSNIk/KjyyK2CfRIsKg="
+          "Value": "sha256-sTyHhh0QBwmn7pNXChLVuPatpmFUTA5BQbyj4E4TnhI="
         }
       ]
     },
@@ -15072,7 +15072,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "12040"
+          "Value": "12144"
         },
         {
           "Name": "Content-Type",
@@ -15080,11 +15080,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"McPAYUlcWQ5/2mAV8tJO2+OpkJDzUt+aOI3cnrHB198=\""
+          "Value": "\"zKODSHbNieH8YLxiA60eRcWyKJCzOwC02cG4uCMmrSM=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 17 Dec 2024 09:44:40 GMT"
+          "Value": "Wed, 18 Dec 2024 09:38:28 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -15094,18 +15094,18 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-McPAYUlcWQ5/2mAV8tJO2+OpkJDzUt+aOI3cnrHB198="
+          "Value": "sha256-zKODSHbNieH8YLxiA60eRcWyKJCzOwC02cG4uCMmrSM="
         }
       ]
     },
     {
       "Route": "_framework/StudentsManagementShared.pdb",
-      "AssetFile": "D:\\dev\\StudentsManagementBlazor\\StudentsManagementBlazor\\StudentsManagementBlazor.Client\\obj\\Debug\\net8.0\\compressed\\qswxb8kije-1w7diaymea.gz",
+      "AssetFile": "D:\\dev\\StudentsManagementBlazor\\StudentsManagementBlazor\\StudentsManagementBlazor.Client\\obj\\Debug\\net8.0\\compressed\\qswxb8kije-0tywkonqwi.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.000146455770"
+          "Quality": "0.000145201104"
         }
       ],
       "ResponseHeaders": [
@@ -15115,15 +15115,15 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "6827"
+          "Value": "6886"
         },
         {
           "Name": "ETag",
-          "Value": "\"8azK+AK2UKIzXW+cl03cCo1TEVe2hw+sjnVRtP6x5n8=\""
+          "Value": "\"KfRNuMvw10BbNpu1Sn/EeR5o0rOuJKuQA+etrbolhxw=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 17 Dec 2024 09:44:40 GMT"
+          "Value": "Wed, 18 Dec 2024 09:38:28 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -15143,19 +15143,19 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"McPAYUlcWQ5/2mAV8tJO2+OpkJDzUt+aOI3cnrHB198=\""
+          "Value": "W/\"zKODSHbNieH8YLxiA60eRcWyKJCzOwC02cG4uCMmrSM=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-McPAYUlcWQ5/2mAV8tJO2+OpkJDzUt+aOI3cnrHB198="
+          "Value": "sha256-zKODSHbNieH8YLxiA60eRcWyKJCzOwC02cG4uCMmrSM="
         }
       ]
     },
     {
       "Route": "_framework/StudentsManagementShared.pdb.gz",
-      "AssetFile": "D:\\dev\\StudentsManagementBlazor\\StudentsManagementBlazor\\StudentsManagementBlazor.Client\\obj\\Debug\\net8.0\\compressed\\qswxb8kije-1w7diaymea.gz",
+      "AssetFile": "D:\\dev\\StudentsManagementBlazor\\StudentsManagementBlazor\\StudentsManagementBlazor.Client\\obj\\Debug\\net8.0\\compressed\\qswxb8kije-0tywkonqwi.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -15164,7 +15164,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "6827"
+          "Value": "6886"
         },
         {
           "Name": "Content-Type",
@@ -15172,11 +15172,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"8azK+AK2UKIzXW+cl03cCo1TEVe2hw+sjnVRtP6x5n8=\""
+          "Value": "\"KfRNuMvw10BbNpu1Sn/EeR5o0rOuJKuQA+etrbolhxw=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 17 Dec 2024 09:44:40 GMT"
+          "Value": "Wed, 18 Dec 2024 09:38:28 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -15194,7 +15194,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-8azK+AK2UKIzXW+cl03cCo1TEVe2hw+sjnVRtP6x5n8="
+          "Value": "sha256-KfRNuMvw10BbNpu1Sn/EeR5o0rOuJKuQA+etrbolhxw="
         }
       ]
     },
@@ -15217,11 +15217,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"i7ru6JqrF+PQpNDsbDMlascckWc03nVMBtlDFry+a88=\""
+          "Value": "\"a+5GRypGWY44/54PHqfqsAWOIgWJprBIq0GyG1KqWp0=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 17 Dec 2024 09:44:41 GMT"
+          "Value": "Wed, 18 Dec 2024 08:22:50 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -15231,18 +15231,18 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-i7ru6JqrF+PQpNDsbDMlascckWc03nVMBtlDFry+a88="
+          "Value": "sha256-a+5GRypGWY44/54PHqfqsAWOIgWJprBIq0GyG1KqWp0="
         }
       ]
     },
     {
       "Route": "_framework/StudentsManagementShared.wasm",
-      "AssetFile": "D:\\dev\\StudentsManagementBlazor\\StudentsManagementBlazor\\StudentsManagementBlazor.Client\\obj\\Debug\\net8.0\\compressed\\jquwy9x6rh-dunzikkyg1.gz",
+      "AssetFile": "D:\\dev\\StudentsManagementBlazor\\StudentsManagementBlazor\\StudentsManagementBlazor.Client\\obj\\Debug\\net8.0\\compressed\\jquwy9x6rh-fb1britf5b.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.000329815303"
+          "Quality": "0.000320718409"
         }
       ],
       "ResponseHeaders": [
@@ -15252,15 +15252,15 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "3031"
+          "Value": "3117"
         },
         {
           "Name": "ETag",
-          "Value": "\"LrRKViNfE4e9fXUTW4MAxQnPUTjo3CqrKOMqaS81lls=\""
+          "Value": "\"HrQUzgWKXZAZppT665UDaSd6sWVtkpa+pQ0jFECcfqk=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 17 Dec 2024 09:44:41 GMT"
+          "Value": "Wed, 18 Dec 2024 08:22:50 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -15280,19 +15280,19 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"i7ru6JqrF+PQpNDsbDMlascckWc03nVMBtlDFry+a88=\""
+          "Value": "W/\"a+5GRypGWY44/54PHqfqsAWOIgWJprBIq0GyG1KqWp0=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-i7ru6JqrF+PQpNDsbDMlascckWc03nVMBtlDFry+a88="
+          "Value": "sha256-a+5GRypGWY44/54PHqfqsAWOIgWJprBIq0GyG1KqWp0="
         }
       ]
     },
     {
       "Route": "_framework/StudentsManagementShared.wasm.gz",
-      "AssetFile": "D:\\dev\\StudentsManagementBlazor\\StudentsManagementBlazor\\StudentsManagementBlazor.Client\\obj\\Debug\\net8.0\\compressed\\jquwy9x6rh-dunzikkyg1.gz",
+      "AssetFile": "D:\\dev\\StudentsManagementBlazor\\StudentsManagementBlazor\\StudentsManagementBlazor.Client\\obj\\Debug\\net8.0\\compressed\\jquwy9x6rh-fb1britf5b.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -15301,7 +15301,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "3031"
+          "Value": "3117"
         },
         {
           "Name": "Content-Type",
@@ -15309,11 +15309,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"LrRKViNfE4e9fXUTW4MAxQnPUTjo3CqrKOMqaS81lls=\""
+          "Value": "\"HrQUzgWKXZAZppT665UDaSd6sWVtkpa+pQ0jFECcfqk=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 17 Dec 2024 09:44:41 GMT"
+          "Value": "Wed, 18 Dec 2024 08:22:50 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -15331,7 +15331,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-LrRKViNfE4e9fXUTW4MAxQnPUTjo3CqrKOMqaS81lls="
+          "Value": "sha256-HrQUzgWKXZAZppT665UDaSd6sWVtkpa+pQ0jFECcfqk="
         }
       ]
     },

@@ -43,11 +43,12 @@
 
 	protected async Task CreateCountry()
 	{
-		navigation.NavigateTo("/students-list");
+		var result = await CountryService.AddAsync(countryobj);
+		navigation.NavigateTo("/countries-list");
 	}
 
 	public void Cancel()
 	{
-		navigation.NavigateTo("/students-list");
+		navigation.NavigateTo("/countries-list");
 	}
 }

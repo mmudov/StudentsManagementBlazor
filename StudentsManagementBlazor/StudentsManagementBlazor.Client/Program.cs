@@ -23,6 +23,8 @@ namespace StudentsManagementBlazor.Client
                 BaseAddress = new Uri(builder.HostEnvironment.BaseAddress)
             });
 
+            builder.Services.AddScoped<ICountryRepository, CountryService>();
+
             await builder.Build().RunAsync();
         }
     }

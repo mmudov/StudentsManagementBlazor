@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("StudentsManagementBlazor.Client")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+99e64ab684c1a967a48e5c8fac2f0edd0499f567")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+df166cce351df0f9ce58e32a9af260a841899a5e")]
 [assembly: System.Reflection.AssemblyProductAttribute("StudentsManagementBlazor.Client")]
 [assembly: System.Reflection.AssemblyTitleAttribute("StudentsManagementBlazor.Client")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

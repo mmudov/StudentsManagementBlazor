@@ -22,7 +22,7 @@ namespace StudentsManagementBlazor.Client.Services
 
         public async Task<Student> DeleteStudentAsync(int studentId)
         {
-            var deletestudent = await _httpClient.PostAsJsonAsync("api/Student/Delete-Student", studentId);
+            var deletestudent = await _httpClient.DeleteAsync($"api/Student/Delete-Student/{studentId}");
             var response = await deletestudent.Content.ReadFromJsonAsync<Student>();
             return response;
         }
@@ -36,7 +36,7 @@ namespace StudentsManagementBlazor.Client.Services
 
         public async Task<Student> GetStudentByIdAsync(int studentId)
         {
-            var singletudent = await _httpClient.GetAsync("api/Student/Single-Student");
+            var singletudent = await _httpClient.GetAsync($"api/Student/Single-Student/{studentId}");
             var response = await singletudent.Content.ReadFromJsonAsync<Student>();
             return response;
         }

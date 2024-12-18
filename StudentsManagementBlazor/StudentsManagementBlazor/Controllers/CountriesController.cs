@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using StudentsManagementBlazor.Data;
+using StudentsManagementBlazor.Shared.Models;
 using StudentsManagementShared.Models;
 
 namespace StudentsManagementBlazor.Controllers
@@ -44,33 +45,13 @@ namespace StudentsManagementBlazor.Controllers
 
         // PUT: api/Countries/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
-        [HttpPut("Update-Country/{id}")]
-        public async Task<IActionResult> UpdateSingleCountry(int id, Country country)
+        [HttpPost("Update-Country")]
+        public async Task<ActionResult<Country>> UpdateAsync(Country country)
         {
-            if (id != country.Id)
-            {
-                return BadRequest();
-            }
+            _context.Update(country);
+            await _context.SaveChangesAsync();
 
-            _context.Entry(country).State = EntityState.Modified;
-
-            try
-            {
-                await _context.SaveChangesAsync();
-            }
-            catch (DbUpdateConcurrencyException)
-            {
-                if (!CountryExists(id))
-                {
-                    return NotFound();
-                }
-                else
-                {
-                    throw;
-                }
-            }
-
-            return NoContent();
+            return Ok(country);
         }
 
         // POST: api/Countries
