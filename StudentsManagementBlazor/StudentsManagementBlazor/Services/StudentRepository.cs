@@ -35,7 +35,8 @@ namespace StudentsManagementBlazor.Services
 
         public async Task<List<Student>> GetAllStudentsAsync()
         {
-            var students = await _context.Students.ToListAsync();
+            //var students = await _context.Students.ToListAsync();
+            var students = await _context.Students.Include(x => x.Country).Include(x => x.Gender).ToListAsync();
 
             return students;
         }

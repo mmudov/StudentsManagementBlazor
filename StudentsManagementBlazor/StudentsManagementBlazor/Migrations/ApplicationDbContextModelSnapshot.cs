@@ -232,9 +232,11 @@ namespace StudentsManagementBlazor.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Country")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<int>("CountryId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("DOB")
+                        .HasColumnType("datetime2");
 
                     b.Property<string>("EmailAddress")
                         .IsRequired()
@@ -243,6 +245,9 @@ namespace StudentsManagementBlazor.Migrations
                     b.Property<string>("FirstName")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("GenderId")
+                        .HasColumnType("int");
 
                     b.Property<string>("LastName")
                         .IsRequired()
@@ -256,7 +261,15 @@ namespace StudentsManagementBlazor.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("RegistrationNo")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.HasKey("Id");
+
+                    b.HasIndex("CountryId");
+
+                    b.HasIndex("GenderId");
 
                     b.ToTable("Students");
                 });
@@ -280,6 +293,61 @@ namespace StudentsManagementBlazor.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Countries");
+                });
+
+            modelBuilder.Entity("StudentsManagementShared.Models.Parent", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Address")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("DOB")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("EmailAddress")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("FirstName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("GenderId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("LastName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("MiddleName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("ParentTypeId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("PhoneNumber")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("StudentId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("GenderId");
+
+                    b.HasIndex("ParentTypeId");
+
+                    b.HasIndex("StudentId");
+
+                    b.ToTable("Parents");
                 });
 
             modelBuilder.Entity("StudentsManagementShared.Models.SystemCode", b =>
@@ -381,6 +449,52 @@ namespace StudentsManagementBlazor.Migrations
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+                });
+
+            modelBuilder.Entity("StudentsManagementBlazor.Shared.Models.Student", b =>
+                {
+                    b.HasOne("StudentsManagementShared.Models.Country", "Country")
+                        .WithMany()
+                        .HasForeignKey("CountryId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("StudentsManagementShared.Models.SystemCodeDetail", "Gender")
+                        .WithMany()
+                        .HasForeignKey("GenderId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Country");
+
+                    b.Navigation("Gender");
+                });
+
+            modelBuilder.Entity("StudentsManagementShared.Models.Parent", b =>
+                {
+                    b.HasOne("StudentsManagementShared.Models.SystemCodeDetail", "Gender")
+                        .WithMany()
+                        .HasForeignKey("GenderId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("StudentsManagementShared.Models.SystemCodeDetail", "ParentType")
+                        .WithMany()
+                        .HasForeignKey("ParentTypeId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("StudentsManagementBlazor.Shared.Models.Student", "Student")
+                        .WithMany()
+                        .HasForeignKey("StudentId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Gender");
+
+                    b.Navigation("ParentType");
+
+                    b.Navigation("Student");
                 });
 
             modelBuilder.Entity("StudentsManagementShared.Models.SystemCodeDetail", b =>

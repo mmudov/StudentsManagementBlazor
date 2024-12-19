@@ -55,6 +55,9 @@ namespace StudentsManagementBlazor
             });
 
             builder.Services.AddScoped<ICountryRepository, CountryRespository>();
+            builder.Services.AddScoped<ISystemCodeDetailRepository, SystemCodeDetailRepository>();
+            builder.Services.AddScoped<ISystemCodeRepository, SystemCodeRepository> ();
+            builder.Services.AddScoped<IParentRepository, ParentRepository>();
 
             var app = builder.Build();
 

@@ -16,6 +16,13 @@
 				<div class="row">
 					<div class="col-md-6">
 						<div class="form-group">
+							<label class="control-label">Registration No</label>
+							<InputText for="RegistrationNo" class="form-control" @bind-Value="@studobj.RegistrationNo" />
+							<ValidationMessage For="()=>studobj.RegistrationNo" />
+						</div>
+					</div>
+					<div class="col-md-6">
+						<div class="form-group">
 							<label class="control-label">First Name</label>
 							<InputText for="FirstName" class="form-control" @bind-Value="@studobj.FirstName"/>
 							<ValidationMessage For="()=>studobj.FirstName"/>
@@ -60,14 +67,37 @@
 						<div class="form-group">
 							<label class="control-label">Student Country</label>
 							<!--<InputText for="Country" class="form-control" @bind-Value="@studobj.Country" />-->
-							<InputSelect for="Country" class="form-control" @bind-Value="@studobj.Country">
+							<InputSelect for="CountryId" class="form-control" @bind-Value="@studobj.CountryId">
 								<option value="">Select Country</option>
 								@foreach(var country in Countries)
 								{
-									<option value="@country.Name">@country.Name</option>
+									<option value="@country.Id">@country.Name</option>
 								}
 							</InputSelect>
-							<ValidationMessage For="()=>studobj.Country" />
+							<ValidationMessage For="()=>studobj.CountryId" />
+						</div>
+					</div>
+					<div class="col-md-6">
+						<div class="form-group">
+							<label class="control-label">Gender</label>
+							<InputSelect for="GenderId" class="form-control" @bind-Value="@studobj.GenderId">
+								<option value="">Select Gender</option>
+								@if (Gender != null && Gender.Any())
+								{
+									@foreach (var gender in Gender)
+									{
+										<option value="@gender.Id">@gender.Description</option>
+									}
+								}
+							</InputSelect>
+							<ValidationMessage For="()=>studobj.GenderId" />
+						</div>
+					</div>
+					<div class="col-md-6">
+						<div class="form-group">
+							<label class="control-label">Date of Birth</label>
+							<InputDate for="DOB" class="form-control" @bind-Value="@studobj.DOB" />
+							<ValidationMessage For="()=>studobj.DOB" />
 						</div>
 					</div>
 				</div>
@@ -86,9 +116,12 @@
 
 	List<Country> Countries = new List<Country>();
 
+	List<SystemCodeDetail> Gender = new List<SystemCodeDetail>();
+
 	protected override async Task OnInitializedAsync()
 	{
 		Countries = await CountryService.GetAllAsync();
+		Gender = await SystemCodeDetailService.GetByCodeAsync("Gender");
 	}
 
 	protected async Task CreateStudent()

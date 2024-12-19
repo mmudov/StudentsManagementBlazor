@@ -3,12 +3,8 @@
   "WorkspaceRootPath": "D:\\dev\\StudentsManagementBlazor\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{E504878B-5309-4843-9257-74F0D1F18455}|StudentsManagementBlazor\\StudentsManagementBlazor.Client\\StudentsManagementBlazor.Client.csproj|d:\\dev\\studentsmanagementblazor\\studentsmanagementblazor\\studentsmanagementblazor.client\\pages\\students\\studentslist.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{E504878B-5309-4843-9257-74F0D1F18455}|StudentsManagementBlazor\\StudentsManagementBlazor.Client\\StudentsManagementBlazor.Client.csproj|solutionrelative:studentsmanagementblazor\\studentsmanagementblazor.client\\pages\\students\\studentslist.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E504878B-5309-4843-9257-74F0D1F18455}|StudentsManagementBlazor\\StudentsManagementBlazor.Client\\StudentsManagementBlazor.Client.csproj|d:\\dev\\studentsmanagementblazor\\studentsmanagementblazor\\studentsmanagementblazor.client\\pages\\students\\addnewstudent.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{E504878B-5309-4843-9257-74F0D1F18455}|StudentsManagementBlazor\\StudentsManagementBlazor.Client\\StudentsManagementBlazor.Client.csproj|solutionrelative:studentsmanagementblazor\\studentsmanagementblazor.client\\pages\\students\\addnewstudent.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{1382402D-36E1-4766-AE2B-5B78D0DB2931}|StudentsManagementBlazor\\StudentsManagementBlazor\\StudentsManagementBlazor.csproj|d:\\dev\\studentsmanagementblazor\\studentsmanagementblazor\\studentsmanagementblazor\\components\\layout\\navmenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1382402D-36E1-4766-AE2B-5B78D0DB2931}|StudentsManagementBlazor\\StudentsManagementBlazor\\StudentsManagementBlazor.csproj|solutionrelative:studentsmanagementblazor\\studentsmanagementblazor\\components\\layout\\navmenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -17,22 +13,9 @@
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "DockedWidth": 505,
+          "SelectedChildIndex": 5,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "StudentsList.razor",
-              "DocumentMoniker": "D:\\dev\\StudentsManagementBlazor\\StudentsManagementBlazor\\StudentsManagementBlazor.Client\\Pages\\Students\\StudentsList.razor",
-              "RelativeDocumentMoniker": "StudentsManagementBlazor\\StudentsManagementBlazor.Client\\Pages\\Students\\StudentsList.razor",
-              "ToolTip": "D:\\dev\\StudentsManagementBlazor\\StudentsManagementBlazor\\StudentsManagementBlazor.Client\\Pages\\Students\\StudentsList.razor",
-              "RelativeToolTip": "StudentsManagementBlazor\\StudentsManagementBlazor.Client\\Pages\\Students\\StudentsList.razor",
-              "ViewState": "AgIAABUAAAAAAAAAAAAAAB0AAAAUAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-18T11:58:22.569Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
@@ -55,21 +38,21 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "AddNewStudent.razor",
-              "DocumentMoniker": "D:\\dev\\StudentsManagementBlazor\\StudentsManagementBlazor\\StudentsManagementBlazor.Client\\Pages\\Students\\AddNewStudent.razor",
-              "RelativeDocumentMoniker": "StudentsManagementBlazor\\StudentsManagementBlazor.Client\\Pages\\Students\\AddNewStudent.razor",
-              "ToolTip": "D:\\dev\\StudentsManagementBlazor\\StudentsManagementBlazor\\StudentsManagementBlazor.Client\\Pages\\Students\\AddNewStudent.razor",
-              "RelativeToolTip": "StudentsManagementBlazor\\StudentsManagementBlazor.Client\\Pages\\Students\\AddNewStudent.razor",
-              "ViewState": "AgIAAFgAAAAAAAAAAAAAAF8AAAA9AAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "NavMenu.razor",
+              "DocumentMoniker": "D:\\dev\\StudentsManagementBlazor\\StudentsManagementBlazor\\StudentsManagementBlazor\\Components\\Layout\\NavMenu.razor",
+              "RelativeDocumentMoniker": "StudentsManagementBlazor\\StudentsManagementBlazor\\Components\\Layout\\NavMenu.razor",
+              "ToolTip": "D:\\dev\\StudentsManagementBlazor\\StudentsManagementBlazor\\StudentsManagementBlazor\\Components\\Layout\\NavMenu.razor",
+              "RelativeToolTip": "StudentsManagementBlazor\\StudentsManagementBlazor\\Components\\Layout\\NavMenu.razor",
+              "ViewState": "AgIAABUAAAAAAAAAAAAAAB8AAAB0AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-18T11:41:24.652Z",
+              "WhenOpened": "2024-12-19T15:19:48.769Z",
               "EditorCaption": ""
             }
           ]
         },
         {
-          "DockedWidth": 950,
+          "DockedWidth": 645,
           "SelectedChildIndex": -1,
           "Children": [
             {
@@ -83,6 +66,10 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{a80febb4-e7e0-4147-b476-21aaf2453969}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{004be353-6879-467c-9d1e-9ac23cdf6d49}"
             }
           ]
         },
