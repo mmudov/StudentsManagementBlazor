@@ -1,0 +1,96 @@
+﻿@page "/teachers-list"
+@using StudentsManagementBlazor.Client.Services;
+@using StudentsManagementBlazor.Shared.Models
+@using StudentsManagementShared.Models
+@inject NavigationManager navigation;
+@inject IJSRuntime JsRuntime
+
+<h3>Teachers List</h3>
+
+<div class="container">
+	<div class="row">
+		<p><a class="btn btn-success fload-end" href="/add-teacher">Add New Teacher</a></p>
+		<div class="col-md-12">
+			<div class="card">
+				<div class="card-header"></div>
+				@if (!AllTeachers.Any())
+				{
+					<p><em>Loading Teachers...</em></p>
+				}
+				@if (AllTeachers.Any())
+				{
+					<div class="card-body">
+						<table class="table table-striped table-hover">
+							<thead>
+								<tr>
+									<th>Id</th>
+									<th>First Name</th>
+									<th>Middle Name</th>
+									<th>Last Name</th>
+									<th>Email</th>
+									<th>Phone No</th>
+									<th>Gender</th>
+									<th>Edit</th>
+								</tr>
+							</thead>
+							<tbody>
+								@foreach (var teatcher in AllTeachers)
+								{
+									<tr>
+										<td>@teatcher.Id</td>
+										<td>@teatcher.FirstName</td>
+										<td>@teatcher.MiddleName</td>
+										<td>@teatcher.LastName</td>
+										<td>@teatcher.EmailAddress</td>
+										<td>@teatcher.PhoneNumber</td>
+										<td>@teatcher.Gender.Description</td>
+										<td>
+											<a class="btn btn-success" href="/teacher/edit/@teatcher.Id"> Edit </a>
+										</td>
+									</tr>
+								}
+							</tbody>
+						</table>
+					</div>
+				}
+				else
+				{
+					<div class="alert alert-info">There is not Teachers List Available</div>
+				}
+			</div>
+		</div>
+	</div>
+</div>
+
+@code {
+	private List<Teacher> AllTeachers = new List<Teacher>();
+
+	protected override async Task OnInitializedAsync()
+	{
+		await LoadAllTeachers();
+	}
+
+	private async Task LoadAllTeachers()
+	{
+		var teachers = await TeacherService.GetAllAsync();
+		AllTeachers.Clear();
+
+		if (teachers is null) return;
+
+		foreach (var teacher in teachers)
+		{
+			AllTeachers.Add(teacher);
+		}
+	}
+
+	private void EditTeacher(int id)
+	{
+		navigation.NavigateTo($"teacher/edit/{id}");
+	}
+
+	private async Task DeleteTeacher(int Id)
+	{
+		var result = await ParentService.DeleteAsync(Id);
+		await LoadAllTeachers();
+	}
+}
