@@ -1,0 +1,126 @@
+﻿@page "/issuances-history/edit/{id:int}"
+@using StudentsManagementBlazor.Client.Services;
+@using StudentsManagementBlazor.Shared.Models
+@using StudentsManagementShared.Models
+@inject NavigationManager navigation;
+@inject IJSRuntime JsRuntime
+@rendermode InteractiveServer
+
+<h3>Edit Book Issuance Details</h3>
+
+<hr />
+<div class="row">
+    <div class="com-md-12">
+		<EditForm Model="issuanceobj" OnValidSubmit="UpdateBookIssuance" FormName="updateIssuance">
+            <DataAnnotationsValidator />
+            <ValidationSummary />
+            <div class="col-md-12">
+                <div class="row">
+					<div class="col-md-6">
+						<div class="form-group">
+							<label class="control-label">Issue Date</label>
+							<InputDate for="IssueData" class="form-control" @bind-Value="@issuanceobj.IssueData" />
+							<ValidationMessage For="()=>issuanceobj.IssueData" />
+						</div>
+					</div>
+					<div class="col-md-6">
+						<div class="form-group">
+							<label class="control-label">Return Date</label>
+							<InputDate for="ReturnData" class="form-control" @bind-Value="@issuanceobj.ReturnData" />
+							<ValidationMessage For="()=>issuanceobj.ReturnData" />
+						</div>
+					</div>
+					<div class="col-md-6">
+						<div class="form-group">
+							<label class="control-label">Class</label>
+							<InputSelect for="ClassId" class="form-control" @bind-Value="@issuanceobj.ClassId">
+								<option value="">Select Class</option>
+								@if (Class != null && Class.Any())
+								{
+									@foreach (var item in Class)
+									{
+										<option value="@item.Id">@item.Description</option>
+									}
+								}
+							</InputSelect>
+							<ValidationMessage For="()=>issuanceobj.ClassId" />
+						</div>
+					</div>
+					<div class="col-md-6">
+						<div class="form-group">
+							<label class="control-label">Student</label>
+							<InputSelect for="StudentId" class="form-control" @bind-Value="@issuanceobj.StudentId">
+								<option value="">Select Student</option>
+								@if (Students != null && Students.Any())
+								{
+									@foreach (var student in Students)
+									{
+										<option value="@student.Id">@student.FullName</option>
+									}
+								}
+							</InputSelect>
+							<ValidationMessage For="()=>issuanceobj.StudentId" />
+						</div>
+					</div>
+					<div class="col-md-6">
+						<div class="form-group">
+							<label class="control-label">Book Type</label>
+							<InputSelect for="BookId" class="form-control" @bind-Value="@issuanceobj.BookId">
+								<option value="">Select Student</option>
+								@foreach (var book in Books)
+								{
+									<option value="@book.Id">@book.Name</option>
+								}
+							</InputSelect>
+							<ValidationMessage For="()=>issuanceobj.BookId" />
+						</div>
+					</div>
+					<div class="col-md-6">
+						<div class="form-group">
+							<label class="control-label">Notes</label>
+							<InputTextArea for="Notes" class="form-control" @bind-Value="@issuanceobj.Notes" />
+							<ValidationMessage For="()=>issuanceobj.Notes" />
+						</div>
+					</div>
+				</div>
+                <div class="form-group mt-4">
+                    <button type="submit" class="btn btn-primary">Update Issuance Book History</button>
+                    <button type="button" @onclick="Cancel" class="btn btn-danger">Cancel</button>
+                </div>
+            </div>
+        </EditForm>
+    </div>
+</div>
+
+@code {
+    [SupplyParameterFromForm]
+	public BookIssuance issuanceobj { get; set; } = new();
+
+
+    [Parameter]
+    public int id { get; set; }
+
+	List<SystemCodeDetail> Class = new List<SystemCodeDetail>();
+
+	List<Book> Books = new List<Book>();
+
+    List<Student> Students = new List<Student>();
+
+    protected override async Task OnInitializedAsync()
+    {
+		issuanceobj = await IssuanceService.GetByIdAsync(id);
+        Class = await SystemCodeDetailService.GetByCodeAsync("Class");
+        Books = await BookService.GetAllAsync();
+        Students = await StudentService.GetAllStudentsAsync();
+    }
+
+	protected async Task UpdateBookIssuance()
+    {
+		var result = await IssuanceService.UpdateAsync(issuanceobj);
+		navigation.NavigateTo("/issuances-history-list");
+    }
+    public void Cancel()
+    {
+		navigation.NavigateTo("/issuances-history-list");
+    }
+}

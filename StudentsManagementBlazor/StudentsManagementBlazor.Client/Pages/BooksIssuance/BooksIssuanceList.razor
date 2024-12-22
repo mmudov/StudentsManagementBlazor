@@ -1,0 +1,81 @@
+﻿@page "/issuances-history-list"
+@using StudentsManagementBlazor.Client.Services;
+@using StudentsManagementBlazor.Shared.Models
+@using StudentsManagementShared.Models
+@inject NavigationManager navigation;
+@inject IJSRuntime JsRuntime
+@*@rendermode InteractiveAuto*@
+
+<div class="container">
+	<div class="row">
+		<p><a class="btn btn-success fload-end" href="/add-issuances-history">Add New Book Issuance</a></p>
+		<div class="col-md-12">
+			<div class="card">
+				<div class="card-header"></div>
+				@if (!AllBookIssuancesHistory.Any())
+				{
+					<p><em>Loading Books Issuance History...</em></p>
+				}
+				@if (AllBookIssuancesHistory.Any())
+				{
+					<div class="card-body">
+						<table class="table table-striped table-hover">
+							<thead>
+								<tr>
+									<th>Id</th>
+									<th>Issue Date</th>
+									<th>Return Date</th>
+									<th>Class Name</th>
+									<th>Student Name</th>
+									<th>Book Name</th>
+									<th>Edit</th>
+								</tr>
+							</thead>
+							<tbody>
+								@foreach (var issue in AllBookIssuancesHistory)
+								{
+									<tr>
+										<td>@issue.Id</td>
+										<td>@issue.IssueData</td>
+										<td>@issue.ReturnData</td>
+										<td>@issue.Class.Description</td>
+										<td>@issue.Student.FullName</td>
+										<td>@issue.Book.Name</td>
+										<td>
+											<a class="btn btn-success" href="/issuances-history/edit/@issue.Id"> Edit </a>
+										</td>
+									</tr>
+								}
+							</tbody>
+						</table>
+					</div>
+				}
+				else
+				{
+					<div class="alert alert-info">There is no Book Issuance History Available</div>
+				}
+			</div>
+		</div>
+	</div>
+</div>
+
+@code {
+	private List<BookIssuance> AllBookIssuancesHistory = new List<BookIssuance>();
+
+	protected override async Task OnInitializedAsync()
+	{
+		await LoadAllAllBookIssuancesHistory();
+	}
+
+	private async Task LoadAllAllBookIssuancesHistory()
+	{
+		var data = await IssuanceService.GetAllAsync();
+		AllBookIssuancesHistory.Clear();
+
+		if (data is null) return;
+
+		AllBookIssuancesHistory.Clear();
+
+		AllBookIssuancesHistory.AddRange(data);
+	}
+}

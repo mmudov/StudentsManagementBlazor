@@ -1,0 +1,81 @@
+﻿@page "/add-book"
+@using StudentsManagementBlazor.Client.Services;
+@using StudentsManagementBlazor.Shared.Models
+@using StudentsManagementShared.Models
+@inject NavigationManager navigation;
+@inject IJSRuntime JsRuntime
+
+<h3>Add Book</h3>
+
+<div class="row">
+	<div class="com-md-12">
+		<EditForm Model="bookobj" OnValidSubmit="CreateBook" FormName="addBook">
+			<DataAnnotationsValidator />
+			<ValidationSummary />
+			<div class="col-md-12">
+				<div class="row">
+					<div class="col-md-6">
+						<div class="form-group">
+							<label class="control-label">Book Name</label>
+							<InputText for="Name" class="form-control" @bind-Value="@bookobj.Name" />
+							<ValidationMessage For="()=>bookobj.Name" />
+						</div>
+					</div>
+					<div class="col-md-6">
+						<div class="form-group">
+							<label class="control-label">Book Author</label>
+							<InputText for="Author" class="form-control" @bind-Value="@bookobj.Author" />
+							<ValidationMessage For="()=>bookobj.Author" />
+						</div>
+					</div>
+					<div class="col-md-6">
+						<div class="form-group">
+							<label class="control-label">No of Copies</label>
+							<InputNumber for="NoOfCopy" class="form-control" @bind-Value="@bookobj.NoOfCopy" />
+							<ValidationMessage For="()=>bookobj.NoOfCopy" />
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="form-group">
+						<label class="control-label">Book Category</label>
+						<InputSelect for="BookCategoryId" class="form-control" @bind-Value="@bookobj.BookCategoryId">
+							<option value="">Select Category</option>
+							@foreach (var category in BookCategories)
+							{
+								<option value="@category.Id">@category.Description</option>
+							}
+						</InputSelect>
+						<ValidationMessage For="()=>bookobj.BookCategoryId" />
+					</div>
+				</div>
+				<div class="form-group mt-4">
+					<button type="submit" class="btn btn-primary">Save Book</button>
+					<button type="button" @onclick="Cancel" class="btn btn-danger">Cancel</button>
+				</div>
+			</div>
+		</EditForm>
+	</div>
+</div>
+
+@code {
+	[SupplyParameterFromForm]
+	public Book bookobj { get; set; } = new();
+	
+	List<SystemCodeDetail> BookCategories = new List<SystemCodeDetail>();
+
+	protected override async Task OnInitializedAsync()
+	{
+		BookCategories = await SystemCodeDetailService.GetByCodeAsync("BookCAtegory");
+	}
+
+	protected async Task CreateBook()
+	{
+		var result = BookService.AddAsync(bookobj);
+		navigation.NavigateTo("/books-list");
+	}
+	public void Cancel()
+	{
+		navigation.NavigateTo("/books-list");
+	}
+}

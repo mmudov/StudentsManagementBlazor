@@ -28,6 +28,30 @@ build_property.EnableCodeStyleSeverity =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQXV0aC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/dev/StudentsManagementBlazor/StudentsManagementBlazor/StudentsManagementBlazor.Client/Pages/BooksIssuance/AddNewBooksIssuance.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQm9va3NJc3N1YW5jZVxBZGROZXdCb29rc0lzc3VhbmNlLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/dev/StudentsManagementBlazor/StudentsManagementBlazor/StudentsManagementBlazor.Client/Pages/BooksIssuance/BooksIssuanceList.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQm9va3NJc3N1YW5jZVxCb29rc0lzc3VhbmNlTGlzdC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/dev/StudentsManagementBlazor/StudentsManagementBlazor/StudentsManagementBlazor.Client/Pages/BooksIssuance/EditBooksIssuance.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQm9va3NJc3N1YW5jZVxFZGl0Qm9va3NJc3N1YW5jZS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/dev/StudentsManagementBlazor/StudentsManagementBlazor/StudentsManagementBlazor.Client/Pages/Books/AddBook.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQm9va3NcQWRkQm9vay5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/dev/StudentsManagementBlazor/StudentsManagementBlazor/StudentsManagementBlazor.Client/Pages/Books/BooksList.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQm9va3NcQm9va3NMaXN0LnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/dev/StudentsManagementBlazor/StudentsManagementBlazor/StudentsManagementBlazor.Client/Pages/Books/EditBook.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQm9va3NcRWRpdEJvb2sucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/dev/StudentsManagementBlazor/StudentsManagementBlazor/StudentsManagementBlazor.Client/Pages/Counter.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ291bnRlci5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
@@ -46,6 +70,18 @@ build_metadata.AdditionalFiles.CssScope =
 
 [D:/dev/StudentsManagementBlazor/StudentsManagementBlazor/StudentsManagementBlazor.Client/Pages/Countries/EditCountry.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ291bnRyaWVzXEVkaXRDb3VudHJ5LnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/dev/StudentsManagementBlazor/StudentsManagementBlazor/StudentsManagementBlazor.Client/Pages/Departmens/AddDepartment.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRGVwYXJ0bWVuc1xBZGREZXBhcnRtZW50LnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/dev/StudentsManagementBlazor/StudentsManagementBlazor/StudentsManagementBlazor.Client/Pages/Departmens/DepartmentsList.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRGVwYXJ0bWVuc1xEZXBhcnRtZW50c0xpc3QucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/dev/StudentsManagementBlazor/StudentsManagementBlazor/StudentsManagementBlazor.Client/Pages/Departmens/EditDepartment.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRGVwYXJ0bWVuc1xFZGl0RGVwYXJ0bWVudC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/dev/StudentsManagementBlazor/StudentsManagementBlazor/StudentsManagementBlazor.Client/Pages/Parents/AddParent.razor]

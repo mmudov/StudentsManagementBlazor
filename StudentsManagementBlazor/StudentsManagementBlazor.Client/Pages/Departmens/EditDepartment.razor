@@ -1,0 +1,68 @@
+﻿@page "/department/edit/{id:int}"
+@using StudentsManagementBlazor.Client.Services;
+@using StudentsManagementBlazor.Shared.Models
+@using StudentsManagementShared.Models
+@inject NavigationManager navigation;
+@inject IJSRuntime JsRuntime
+@rendermode InteractiveServer
+
+<h3>Edit Department</h3>
+
+<hr />
+<div class="row">
+	<div class="com-md-12">
+		<EditForm Model="departmentobj" OnValidSubmit="UpdateDepartment" FormName="updateDepartment">
+			<DataAnnotationsValidator />
+			<ValidationSummary />
+			<div class="col-md-12">
+				<div class="row">
+					<div class="col-md-6">
+						<div class="form-group">
+							<label class="control-label">Department Code</label>
+							<InputText for="Code" class="form-control" @bind-Value="@departmentobj.Code" />
+							<ValidationMessage For="()=>departmentobj.Name" />
+						</div>
+					</div>
+					<div class="col-md-6">
+						<div class="form-group">
+							<label class="control-label">Department Name</label>
+							<InputText for="Name" class="form-control" @bind-Value="@departmentobj.Name" />
+							<ValidationMessage For="()=>departmentobj.Name" />
+						</div>
+					</div>
+					<div class="form-group mt-4">
+						<button type="submit" class="btn btn-primary">Update Department</button>
+						<button type="button" @onclick="Cancel" class="btn btn-danger">Cancel</button>
+					</div>
+				</div>
+			</div>
+		</EditForm>
+	</div>
+</div>
+
+@code {
+	[SupplyParameterFromForm]
+	public Department departmentobj { get; set; } = new();
+
+	[Parameter]
+	public int id { get; set; }
+
+	protected override async Task OnInitializedAsync()
+	{
+		await LoadDepartment();
+	}
+	public async Task LoadDepartment()
+	{
+		departmentobj = await DepartmentService.GetByIdAsync(id);
+	}
+
+	protected async Task UpdateDepartment()
+	{
+		var result = DepartmentService.UpdateAsync(departmentobj);
+		navigation.NavigateTo("/departments-list");
+	}
+	public void Cancel()
+	{
+		navigation.NavigateTo("/departments-list");
+	}
+}
