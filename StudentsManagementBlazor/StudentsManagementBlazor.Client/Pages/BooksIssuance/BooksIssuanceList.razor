@@ -23,12 +23,14 @@
 							<thead>
 								<tr>
 									<th>Id</th>
+									<th>Book Name</th>
 									<th>Issue Date</th>
-									<th>Return Date</th>
+									<th>Due Date</th>
 									<th>Class Name</th>
 									<th>Student Name</th>
-									<th>Book Name</th>
+									<th>Status</th>
 									<th>Edit</th>
+									<th>Return</th>
 								</tr>
 							</thead>
 							<tbody>
@@ -36,13 +38,17 @@
 								{
 									<tr>
 										<td>@issue.Id</td>
+										<td>@issue.Book.Name</td>
 										<td>@issue.IssueData</td>
-										<td>@issue.ReturnData</td>
+										<td>@issue.DueData</td>
 										<td>@issue.Class.Description</td>
 										<td>@issue.Student.FullName</td>
-										<td>@issue.Book.Name</td>
+										<td class="text-success">@issue.Status.Code</td>
 										<td>
 											<a class="btn btn-success" href="/issuances-history/edit/@issue.Id"> Edit </a>
+										</td>
+										<td>
+											<a class="btn btn-warning" href="/return/edit/@issue.Id"> Return </a>
 										</td>
 									</tr>
 								}
@@ -70,12 +76,14 @@
 	private async Task LoadAllAllBookIssuancesHistory()
 	{
 		var data = await IssuanceService.GetAllAsync();
-		AllBookIssuancesHistory.Clear();
-
-		if (data is null) return;
+		var issuedBooks = data.Where(x => x.Status.Code == "Issued");
 
 		AllBookIssuancesHistory.Clear();
 
-		AllBookIssuancesHistory.AddRange(data);
+		if (issuedBooks is null) return;
+
+		AllBookIssuancesHistory.Clear();
+
+		AllBookIssuancesHistory.AddRange(issuedBooks);
 	}
 }

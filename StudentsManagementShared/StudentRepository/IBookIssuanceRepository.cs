@@ -18,5 +18,6 @@ namespace StudentsManagementShared.StudentRepository
         Task<List<BookIssuance>> GetAllAsync();
 
         Task<BookIssuance> GetByIdAsync(int id);
+        Task<BookIssuance> ReturnBookUpdateAsync(BookIssuance mod);
     }
 }

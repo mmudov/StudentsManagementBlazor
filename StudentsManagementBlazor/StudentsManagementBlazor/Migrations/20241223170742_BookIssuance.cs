@@ -18,11 +18,13 @@ namespace StudentsManagementBlazor.Migrations
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     IssueData = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    ReturnData = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    DueData = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    ReturnData = table.Column<DateTime>(type: "datetime2", nullable: true),
                     ClassId = table.Column<int>(type: "int", nullable: false),
                     StudentId = table.Column<int>(type: "int", nullable: false),
                     BookId = table.Column<int>(type: "int", nullable: false),
                     Notes = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    StatusId = table.Column<int>(type: "int", nullable: false),
                     CreatedById = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     CreatedOn = table.Column<DateTime>(type: "datetime2", nullable: false)
                 },
@@ -47,6 +49,12 @@ namespace StudentsManagementBlazor.Migrations
                         principalTable: "SystemCodeDetails",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Restrict);
+                    table.ForeignKey(
+                        name: "FK_BookIssuanceHistory_SystemCodeDetails_StatusId",
+                        column: x => x.StatusId,
+                        principalTable: "SystemCodeDetails",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
                 });
 
             migrationBuilder.CreateIndex(
@@ -58,6 +66,11 @@ namespace StudentsManagementBlazor.Migrations
                 name: "IX_BookIssuanceHistory_ClassId",
                 table: "BookIssuanceHistory",
                 column: "ClassId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_BookIssuanceHistory_StatusId",
+                table: "BookIssuanceHistory",
+                column: "StatusId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_BookIssuanceHistory_StudentId",

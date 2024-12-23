@@ -15,6 +15,12 @@ namespace StudentsManagementBlazor.Services
         }
         public async Task<BookIssuance> AddAsync(BookIssuance mod)
         {
+            var issueStatus = await _context.SystemCodeDetails
+                .Include(x => x.SystemCode)
+                .Where(x => x.SystemCode.Code == "BookIssuanceStatus" && x.Code == "Issued")
+                .FirstOrDefaultAsync();
+
+            mod.StatusId = issueStatus.Id;
             mod.CreatedById = "MM";
             mod.CreatedOn = DateTime.Now;
 
@@ -43,6 +49,7 @@ namespace StudentsManagementBlazor.Services
                 .Include(x => x.Student)
                 .Include(x => x.Class)
                 .Include(x => x.Book)
+                .Include(x => x.Status)
                 .ToListAsync();
 
             return data;
@@ -59,6 +66,23 @@ namespace StudentsManagementBlazor.Services
         public async Task<BookIssuance> UpdateAsync(BookIssuance mod)
         {
             if (mod == null) return null;
+
+            var data = _context.BookIssuanceHistory.Update(mod).Entity;
+            await _context.SaveChangesAsync();
+
+            return data;
+        }
+
+        public async Task<BookIssuance> ReturnBookUpdateAsync(BookIssuance mod)
+        {
+            if (mod == null) return null;
+
+            var returnedStatus = await _context.SystemCodeDetails
+                .Include(x => x.SystemCode)
+                .Where(x => x.SystemCode.Code == "BookIssuanceStatus" && x.Code == "Returned")
+                .FirstOrDefaultAsync();
+
+            mod.StatusId = returnedStatus.Id;
 
             var data = _context.BookIssuanceHistory.Update(mod).Entity;
             await _context.SaveChangesAsync();

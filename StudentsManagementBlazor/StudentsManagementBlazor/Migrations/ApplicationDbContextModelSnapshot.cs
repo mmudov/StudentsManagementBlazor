@@ -324,6 +324,9 @@ namespace StudentsManagementBlazor.Migrations
                     b.Property<DateTime>("CreatedOn")
                         .HasColumnType("datetime2");
 
+                    b.Property<DateTime>("DueData")
+                        .HasColumnType("datetime2");
+
                     b.Property<DateTime>("IssueData")
                         .HasColumnType("datetime2");
 
@@ -331,8 +334,11 @@ namespace StudentsManagementBlazor.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<DateTime>("ReturnData")
+                    b.Property<DateTime?>("ReturnData")
                         .HasColumnType("datetime2");
+
+                    b.Property<int>("StatusId")
+                        .HasColumnType("int");
 
                     b.Property<int>("StudentId")
                         .HasColumnType("int");
@@ -342,6 +348,8 @@ namespace StudentsManagementBlazor.Migrations
                     b.HasIndex("BookId");
 
                     b.HasIndex("ClassId");
+
+                    b.HasIndex("StatusId");
 
                     b.HasIndex("StudentId");
 
@@ -692,6 +700,12 @@ namespace StudentsManagementBlazor.Migrations
                         .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
+                    b.HasOne("StudentsManagementShared.Models.SystemCodeDetail", "Status")
+                        .WithMany()
+                        .HasForeignKey("StatusId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
                     b.HasOne("StudentsManagementBlazor.Shared.Models.Student", "Student")
                         .WithMany()
                         .HasForeignKey("StudentId")
@@ -701,6 +715,8 @@ namespace StudentsManagementBlazor.Migrations
                     b.Navigation("Book");
 
                     b.Navigation("Class");
+
+                    b.Navigation("Status");
 
                     b.Navigation("Student");
                 });
