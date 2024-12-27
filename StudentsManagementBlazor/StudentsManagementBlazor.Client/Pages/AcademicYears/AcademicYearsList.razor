@@ -1,0 +1,93 @@
+﻿@page "/academic-years-list"
+@using StudentsManagementBlazor.Client.Services;
+@using StudentsManagementShared.Models
+@inject NavigationManager navigation;
+@inject IJSRuntime JsRuntime
+
+<div class="container">
+	<div class="row">
+		<p><a class="btn btn-success fload-end" href="/add-academic-year">Add New Academic Year</a></p>
+		<div class="col-md-12">
+			<div class="card">
+				<div class="card-header"></div>
+				@if (!AllAcademicYears.Any())
+				{
+					<p><em>Loading Academic Years...</em></p>
+				}
+				@if (AllAcademicYears.Any())
+				{
+					<div class="card-body">
+						<table class="table table-striped table-hover">
+							<thead>
+								<tr>
+									<th>Id</th>
+									<th>Name</th>
+									<th>Start Date</th>
+									<th>End Date</th>
+									<th>Is Running</th>
+									<th>Edit</th>
+									<th>Deactivate</th>
+								</tr>
+							</thead>
+							<tbody>
+								@foreach (var academicyear in AllAcademicYears)
+								{
+									<tr>
+										<td>@academicyear.Id</td>
+										<td>@academicyear.Name</td>
+										<td>@academicyear.StartDate</td>
+										<td>@academicyear.EndDate</td>
+										<td>@academicyear.Status.Description</td>
+										@if (academicyear.Status.Code == "Active")
+										{
+											<td>
+												<a class="btn btn-success" href="/academic-year/edit/@academicyear.Id"> Edit </a>
+											</td>
+											<td>
+												<a class="btn btn-warning" href="/academic-year/inactive/@academicyear.Id"> Deactivate </a>
+											</td>
+										}
+										else
+										{
+											<td>
+												<a class="btn btn-success disabled" href="/academic-year/edit/@academicyear.Id"> Edit </a>
+											</td>
+											<td>
+												<a class="btn btn-warning disabled" href="/academic-year/inactive/@academicyear.Id">Deactivate</a>
+											</td>
+										}
+									</tr>
+								}
+							</tbody>
+						</table>
+					</div>
+				}
+				else
+				{
+					<div class="alert alert-info">There is no Acadamic Year List Available</div>
+				}
+			</div>
+		</div>
+	</div>
+</div>
+
+@code {
+	private List<AcademicYear> AllAcademicYears = new();
+
+	public AcademicYear academicyear = new AcademicYear();
+
+	protected override async Task OnInitializedAsync()
+	{
+		await LoadAllAcademicYears();
+	}
+
+	private async Task LoadAllAcademicYears()
+	{
+		var academicyears = await AcademicYearService.GetAllAsync();
+
+		if (academicyears is null) return;
+
+		AllAcademicYears.Clear();
+		AllAcademicYears.AddRange(academicyears);
+	}
+}

@@ -1,0 +1,83 @@
+﻿@page "/academic-year/edit/{id:int}"
+@using StudentsManagementBlazor.Client.Services;
+@using StudentsManagementBlazor.Shared.Models
+@using StudentsManagementShared.Models
+@inject NavigationManager navigation;
+@inject IJSRuntime JsRuntime
+@rendermode InteractiveServer
+
+<h3>Update Academic Year Details</h3>
+<hr />
+<div class="row">
+	<div class="com-md-12">
+		<EditForm Model="academicyearobj" OnValidSubmit="UpdateAcademicYear" FormName="updateAcademicYear">
+			<DataAnnotationsValidator />
+			<ValidationSummary />
+			<div class="col-md-12">
+				<div class="row">
+					<div class="col-md-6">
+						<div class="form-group">
+							<label class="control-label">Academic Year</label>
+							<InputText for="Name" class="form-control" @bind-Value="@academicyearobj.Name" />
+							<ValidationMessage For="()=>academicyearobj.Name" />
+						</div>
+					</div>
+					<div class="col-md-6">
+						<div class="form-group">
+							<label class="control-label">Start Date</label>
+							<InputDate for="StartDate" class="form-control" @bind-Value="@academicyearobj.StartDate" />
+							<ValidationMessage For="()=>academicyearobj.StartDate" />
+						</div>
+					</div>
+					<div class="col-md-6">
+						<div class="form-group">
+							<label class="control-label">End Date</label>
+							<InputDate for="EndDate" class="form-control" @bind-Value="@academicyearobj.EndDate" />
+							<ValidationMessage For="()=>academicyearobj.EndDate" />
+						</div>
+					</div>
+					<div class="col-md-6">
+						<div class="form-group">
+							<label class="control-label">Notes</label>
+							<InputTextArea for="Notes" class="form-control" @bind-Value="@academicyearobj.Notes" />
+							<ValidationMessage For="()=>academicyearobj.Notes" />
+						</div>
+					</div>
+					<div class="form-group mt-4">
+						<button type="submit" class="btn btn-primary">Update Academic Year</button>
+						<button type="button" @onclick="Cancel" class="btn btn-danger">Cancel</button>
+					</div>
+				</div>
+			</div>
+		</EditForm>
+	</div>
+</div>
+
+@code {
+	[SupplyParameterFromForm]
+	public AcademicYear academicyearobj { get; set; } = new();
+
+	[Parameter]
+	public int id { get; set; }
+
+	protected override async Task OnInitializedAsync()
+	{
+		await LoadAcademicYears();
+	}
+
+	private async Task LoadAcademicYears()
+	{
+		academicyearobj = await AcademicYearService.GetByIdAsync(id);
+	}
+
+	protected async Task UpdateAcademicYear()
+	{
+		var result = await AcademicYearService.UpdateAsync(academicyearobj);
+
+		navigation.NavigateTo("/academic-years-list");
+	}
+	public void Cancel()
+	{
+		navigation.NavigateTo("/academic-years-list");
+	}
+}

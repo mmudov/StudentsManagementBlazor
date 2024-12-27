@@ -274,6 +274,38 @@ namespace StudentsManagementBlazor.Migrations
                     b.ToTable("Students");
                 });
 
+            modelBuilder.Entity("StudentsManagementShared.Models.AcademicYear", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<DateTime>("EndDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Notes")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("StartDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("StatusId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("StatusId");
+
+                    b.ToTable("AcademicYears");
+                });
+
             modelBuilder.Entity("StudentsManagementShared.Models.Book", b =>
                 {
                     b.Property<int>("Id")
@@ -403,6 +435,55 @@ namespace StudentsManagementBlazor.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Departments");
+                });
+
+            modelBuilder.Entity("StudentsManagementShared.Models.Grade", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("CreatedById")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("CreatedOn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("GradeCode")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("GradeName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("GradePoint")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("MarkForm")
+                        .HasColumnType("int");
+
+                    b.Property<int>("MarkTo")
+                        .HasColumnType("int");
+
+                    b.Property<string>("ModifiedById")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("ModifiedOn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Notes")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Grades");
                 });
 
             modelBuilder.Entity("StudentsManagementShared.Models.Parent", b =>
@@ -673,6 +754,17 @@ namespace StudentsManagementBlazor.Migrations
                     b.Navigation("Country");
 
                     b.Navigation("Gender");
+                });
+
+            modelBuilder.Entity("StudentsManagementShared.Models.AcademicYear", b =>
+                {
+                    b.HasOne("StudentsManagementShared.Models.SystemCodeDetail", "Status")
+                        .WithMany()
+                        .HasForeignKey("StatusId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.Navigation("Status");
                 });
 
             modelBuilder.Entity("StudentsManagementShared.Models.Book", b =>

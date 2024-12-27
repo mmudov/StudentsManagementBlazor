@@ -24,6 +24,22 @@ build_property._RazorSourceGeneratorDebug =
 build_property.EffectiveAnalysisLevelStyle = 8.0
 build_property.EnableCodeStyleSeverity = 
 
+[D:/dev/StudentsManagementBlazor/StudentsManagementBlazor/StudentsManagementBlazor.Client/Pages/AcademicYears/AcademicYearsList.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWNhZGVtaWNZZWFyc1xBY2FkZW1pY1llYXJzTGlzdC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/dev/StudentsManagementBlazor/StudentsManagementBlazor/StudentsManagementBlazor.Client/Pages/AcademicYears/AddAcademicYear.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWNhZGVtaWNZZWFyc1xBZGRBY2FkZW1pY1llYXIucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/dev/StudentsManagementBlazor/StudentsManagementBlazor/StudentsManagementBlazor.Client/Pages/AcademicYears/EditAcademicYear.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWNhZGVtaWNZZWFyc1xFZGl0QWNhZGVtaWNZZWFyLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/dev/StudentsManagementBlazor/StudentsManagementBlazor/StudentsManagementBlazor.Client/Pages/AcademicYears/InactiveAcademicYear.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWNhZGVtaWNZZWFyc1xJbmFjdGl2ZUFjYWRlbWljWWVhci5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/dev/StudentsManagementBlazor/StudentsManagementBlazor/StudentsManagementBlazor.Client/Pages/Auth.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQXV0aC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
@@ -90,6 +106,18 @@ build_metadata.AdditionalFiles.CssScope =
 
 [D:/dev/StudentsManagementBlazor/StudentsManagementBlazor/StudentsManagementBlazor.Client/Pages/Departmens/EditDepartment.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRGVwYXJ0bWVuc1xFZGl0RGVwYXJ0bWVudC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/dev/StudentsManagementBlazor/StudentsManagementBlazor/StudentsManagementBlazor.Client/Pages/Grades/AddNewGrade.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcR3JhZGVzXEFkZE5ld0dyYWRlLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/dev/StudentsManagementBlazor/StudentsManagementBlazor/StudentsManagementBlazor.Client/Pages/Grades/EditGrade.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcR3JhZGVzXEVkaXRHcmFkZS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/dev/StudentsManagementBlazor/StudentsManagementBlazor/StudentsManagementBlazor.Client/Pages/Grades/GradesList.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcR3JhZGVzXEdyYWRlc0xpc3QucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/dev/StudentsManagementBlazor/StudentsManagementBlazor/StudentsManagementBlazor.Client/Pages/Parents/AddParent.razor]

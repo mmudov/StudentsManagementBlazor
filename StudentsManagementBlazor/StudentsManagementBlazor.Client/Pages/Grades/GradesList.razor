@@ -1,0 +1,77 @@
+﻿@page "/grades-list"
+@using StudentsManagementBlazor.Client.Services;
+@using StudentsManagementShared.Models
+@inject NavigationManager navigation;
+@inject IJSRuntime JsRuntime
+
+<div class="container">
+	<div class="row">
+		<p><a class="btn btn-success fload-end" href="/add-grade">Add New Grade</a></p>
+		<div class="col-md-12">
+			<div class="card">
+				<div class="card-header"></div>
+				@if (!AllGrades.Any())
+				{
+					<p><em>Loading Grades...</em></p>
+				}
+				@if (AllGrades.Any())
+				{
+					<div class="card-body">
+						<table class="table table-striped table-hover">
+							<thead>
+								<tr>
+									<th>Id</th>
+									<th>Grade Code</th>
+									<th>Grade Name</th>
+									<th>Grade Point</th>
+									<th>Mark From</th>
+									<th>Mark To</th>
+									<th>Edit</th>
+								</tr>
+							</thead>
+							<tbody>
+								@foreach (var grade in AllGrades)
+								{
+									<tr>
+										<td>@grade.Id</td>
+										<td>@grade.GradeCode</td>
+										<td>@grade.GradeName</td>
+										<td>@grade.GradePoint</td>
+										<td>@grade.MarkForm</td>
+										<td>@grade.MarkTo</td>
+										<td>
+											<a class="btn btn-success" href="/grade/edit/@grade.Id"> Edit </a>
+										</td>
+									</tr>
+								}
+							</tbody>
+						</table>
+					</div>
+				}
+				else
+				{
+					<div class="alert alert-info">There is no Grades List Available</div>
+				}
+			</div>
+		</div>
+	</div>
+</div>
+
+@code {
+	private List<Grade> AllGrades = new();
+
+	protected override async Task OnInitializedAsync()
+	{
+		await LoadAllGrades();
+	}
+
+	private async Task LoadAllGrades()
+	{
+		var gardes = await GradeService.GetAllAsync();
+
+		if (gardes is null) return;
+
+		AllGrades.Clear();
+		AllGrades.AddRange(gardes);
+	}
+}

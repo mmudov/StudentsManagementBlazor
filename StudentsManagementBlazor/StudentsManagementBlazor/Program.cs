@@ -63,6 +63,8 @@ namespace StudentsManagementBlazor
             builder.Services.AddScoped<IBookRepository, BookRepository>();
             builder.Services.AddScoped<IDepartmentRepository, DepartmentRepository>();
             builder.Services.AddScoped<IBookIssuanceRepository, BookIssuanceRepository>();
+            builder.Services.AddScoped<IAcademicYearRepository, AcademicYearRepository>();
+            builder.Services.AddScoped<IGradeRepository, GradeRepository>();
 
             var app = builder.Build();
 

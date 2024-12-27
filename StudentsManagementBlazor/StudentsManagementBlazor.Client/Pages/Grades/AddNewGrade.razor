@@ -1,0 +1,82 @@
+﻿@page "/add-grade"
+@using StudentsManagementBlazor.Client.Services;
+@using StudentsManagementBlazor.Shared.Models
+@using StudentsManagementShared.Models
+@inject NavigationManager navigation;
+@inject IJSRuntime JsRuntime
+
+<h3>Add Grade</h3>
+<div class="row">
+	<div class="com-md-12">
+		<EditForm Model="gradeobj" OnValidSubmit="CreateGrade" FormName="addGrade">
+			<DataAnnotationsValidator />
+			<ValidationSummary />
+			<div class="col-md-12">
+				<div class="row">
+					<div class="col-md-6">
+						<div class="form-group">
+							<label class="control-label">Grade Code</label>
+							<InputText for="GradeCode" class="form-control" @bind-Value="@gradeobj.GradeCode" />
+							<ValidationMessage For="()=>gradeobj.GradeCode" />
+						</div>
+					</div>
+					<div class="col-md-6">
+						<div class="form-group">
+							<label class="control-label">Grade Name</label>
+							<InputText for="GradeName" class="form-control" @bind-Value="@gradeobj.GradeName" />
+							<ValidationMessage For="()=>gradeobj.GradeName" />
+						</div>
+					</div>
+					<div class="col-md-6">
+						<div class="form-group">
+							<label class="control-label">Grade Point</label>
+							<InputText for="GradePoint" class="form-control" @bind-Value="@gradeobj.GradePoint" />
+							<ValidationMessage For="()=>gradeobj.GradePoint" />
+						</div>
+					</div>
+					<div class="col-md-6">
+						<div class="form-group">
+							<label class="control-label">Mark From</label>
+							<InputNumber for="MarkForm" class="form-control" @bind-Value="@gradeobj.MarkForm" />
+							<ValidationMessage For="()=>gradeobj.MarkForm" />
+						</div>
+					</div>
+					<div class="col-md-6">
+						<div class="form-group">
+							<label class="control-label">Mark To</label>
+							<InputNumber for="MarkTo" class="form-control" @bind-Value="@gradeobj.MarkTo" />
+							<ValidationMessage For="()=>gradeobj.MarkTo" />
+						</div>
+					</div>
+					<div class="col-md-6">
+						<div class="form-group">
+							<label class="control-label">Notes</label>
+							<InputTextArea for="Notes" class="form-control" @bind-Value="@gradeobj.Notes" />
+							<ValidationMessage For="()=>gradeobj.Notes" />
+						</div>
+					</div>
+				</div>
+				<div class="form-group mt-4">
+					<button type="submit" class="btn btn-primary">Save Grade</button>
+					<button type="button" @onclick="Cancel" class="btn btn-danger">Cancel</button>
+				</div>
+			</div>
+		</EditForm>
+	</div>
+</div>
+
+@code {
+	[SupplyParameterFromForm]
+	public Grade gradeobj { get; set; } = new();
+
+	protected async Task CreateGrade()
+	{
+		var result = await GradeService.AddAsync(gradeobj);
+		navigation.NavigateTo("/grades-list");
+	}
+
+	public void Cancel()
+	{
+		navigation.NavigateTo("/grades-list");
+	}
+}

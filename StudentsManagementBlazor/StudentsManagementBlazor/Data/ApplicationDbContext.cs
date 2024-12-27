@@ -17,6 +17,8 @@ namespace StudentsManagementBlazor.Data
         public DbSet<Department> Departments { get; set; }
         public DbSet<Book> Books { get; set; }
         public DbSet<BookIssuance> BookIssuanceHistory { get; set; }
+        public DbSet<AcademicYear> AcademicYears { get; set; }
+        public DbSet<Grade> Grades { get; set; }
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
