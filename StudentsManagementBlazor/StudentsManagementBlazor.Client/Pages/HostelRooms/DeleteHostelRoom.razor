@@ -1,0 +1,64 @@
+﻿@page "/hostel-room/delete/{id:int}"
+@using StudentsManagementBlazor.Client.Services;
+@using StudentsManagementBlazor.Shared.Models
+@using StudentsManagementShared.Models
+@inject NavigationManager navigation;
+@inject IJSRuntime JsRuntime
+@rendermode InteractiveServer
+
+<h3>Delete Hostel Room</h3>
+<hr />
+<div class="row">
+    <div class="com-md-12">
+        <table class="table">
+            <tr>
+                <th>Room No</th>
+                <td>@hostelroomobj.RoomNo</td>
+            </tr>
+            <tr>
+                <th>No of Beds</th>
+                <td>@hostelroomobj.NoOfBeds</td>
+            </tr>
+            <tr>
+                <th>Cost per Bed</th>
+                <td>@hostelroomobj.CostPerBed</td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>@hostelroomobj.Description</td>
+            </tr>
+        </table>
+    </div>
+    <div class="form-group">
+        <button type="submit" class="btn btn-primary" @onclick="Delete"> Delete Hostel Room</button>
+        <button type="button" class="btn btn-danger" @onclick="Cancel">Cancel</button>
+    </div>
+</div>
+
+@code {
+    public HostelRoom hostelroomobj { get; set; } = new();
+
+    [Parameter]
+    public int id { get; set; }
+
+
+    protected override async Task OnInitializedAsync()
+    {
+        await LoadHostelRoom();
+    }
+    public async Task LoadHostelRoom()
+    {
+        hostelroomobj = await HostelRoomService.GetByIdAsync(id);
+    }
+
+    protected async Task Delete()
+    {
+        var result = await HostelRoomService.DeleteAsync(id);
+        navigation.NavigateTo("/hostel-rooms-list");
+    }
+
+    public void Cancel()
+    {
+        navigation.NavigateTo("/hostel-rooms-list");
+    }
+}

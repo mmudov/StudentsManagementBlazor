@@ -1,0 +1,79 @@
+﻿@page "/hostel-rooms-list"
+@using StudentsManagementBlazor.Client.Services;
+@using StudentsManagementShared.Models
+@inject NavigationManager navigation;
+@inject IJSRuntime JsRuntime
+
+<div class="container">
+	<div class="row">
+		<p><a class="btn btn-success fload-end" href="/add-hostel-room">Add New Hostel Room</a></p>
+		<div class="col-md-12">
+			<div class="card">
+				<div class="card-header"></div>
+				@if (!AllHostelRooms.Any())
+				{
+					<p><em>Loading Hostel Rooms...</em></p>
+				}
+				@if (AllHostelRooms.Any())
+				{
+					<div class="card-body">
+						<table class="table table-striped table-hover">
+							<thead>
+								<tr>
+									<th>Id</th>
+									<th>Room No</th>
+									<th>No of Beds</th>
+									<th>Cost per Bed</th>
+									<th>Description</th>
+									<th>Edit</th>
+									<th>Delete</th>
+								</tr>
+							</thead>
+							<tbody>
+								@foreach (var hostelroom in AllHostelRooms)
+								{
+									<tr>
+										<td>@hostelroom.Id</td>
+										<td>@hostelroom.RoomNo</td>
+										<td>@hostelroom.NoOfBeds</td>
+										<td>@hostelroom.CostPerBed</td>
+										<td>@hostelroom.Description</td>
+										<td>
+											<a class="btn btn-success" href="/hostel-room/edit/@hostelroom.Id"> Edit </a>
+										</td>
+										<td>
+											<a class="btn btn-danger" href="/hostel-room/delete/@hostelroom.Id"> Delete </a>
+										</td>
+									</tr>
+								}
+							</tbody>
+						</table>
+					</div>
+				}
+				else
+				{
+					<div class="alert alert-info">There is no Hostel Rooms List Available</div>
+				}
+			</div>
+		</div>
+	</div>
+</div>
+
+@code {
+	private List<HostelRoom> AllHostelRooms = new();
+
+	protected override async Task OnInitializedAsync()
+	{
+		await LoadAllHostelRooms();
+	}
+
+	private async Task LoadAllHostelRooms()
+	{
+		var hostelrooms = await HostelRoomService.GetAllAsync();
+
+		if (hostelrooms is null) return;
+
+		AllHostelRooms.Clear();
+		AllHostelRooms.AddRange(hostelrooms);
+	}
+}

@@ -486,6 +486,80 @@ namespace StudentsManagementBlazor.Migrations
                     b.ToTable("Grades");
                 });
 
+            modelBuilder.Entity("StudentsManagementShared.Models.Hostel", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Address")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("CreatedById")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("CreatedOn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("HostelName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("HostelTypeId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("HostelTypeId");
+
+                    b.ToTable("Hostels");
+                });
+
+            modelBuilder.Entity("StudentsManagementShared.Models.HostelRoom", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<decimal>("CostPerBed")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("HostelId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("NoOfBeds")
+                        .HasColumnType("int");
+
+                    b.Property<string>("RoomNo")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("RoomTypeId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("HostelId");
+
+                    b.HasIndex("RoomTypeId");
+
+                    b.ToTable("HostelRooms");
+                });
+
             modelBuilder.Entity("StudentsManagementShared.Models.Parent", b =>
                 {
                     b.Property<int>("Id")
@@ -811,6 +885,36 @@ namespace StudentsManagementBlazor.Migrations
                     b.Navigation("Status");
 
                     b.Navigation("Student");
+                });
+
+            modelBuilder.Entity("StudentsManagementShared.Models.Hostel", b =>
+                {
+                    b.HasOne("StudentsManagementShared.Models.SystemCodeDetail", "HostelType")
+                        .WithMany()
+                        .HasForeignKey("HostelTypeId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.Navigation("HostelType");
+                });
+
+            modelBuilder.Entity("StudentsManagementShared.Models.HostelRoom", b =>
+                {
+                    b.HasOne("StudentsManagementShared.Models.Hostel", "Hostel")
+                        .WithMany()
+                        .HasForeignKey("HostelId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.HasOne("StudentsManagementShared.Models.SystemCodeDetail", "RoomType")
+                        .WithMany()
+                        .HasForeignKey("RoomTypeId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.Navigation("Hostel");
+
+                    b.Navigation("RoomType");
                 });
 
             modelBuilder.Entity("StudentsManagementShared.Models.Parent", b =>

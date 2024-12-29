@@ -120,6 +120,38 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcR3JhZGVzXEdyYWRlc0xpc3QucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/dev/StudentsManagementBlazor/StudentsManagementBlazor/StudentsManagementBlazor.Client/Pages/HostelRooms/AddHostelRoom.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSG9zdGVsUm9vbXNcQWRkSG9zdGVsUm9vbS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/dev/StudentsManagementBlazor/StudentsManagementBlazor/StudentsManagementBlazor.Client/Pages/HostelRooms/DeleteHostelRoom.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSG9zdGVsUm9vbXNcRGVsZXRlSG9zdGVsUm9vbS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/dev/StudentsManagementBlazor/StudentsManagementBlazor/StudentsManagementBlazor.Client/Pages/HostelRooms/EditHostelRoom.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSG9zdGVsUm9vbXNcRWRpdEhvc3RlbFJvb20ucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/dev/StudentsManagementBlazor/StudentsManagementBlazor/StudentsManagementBlazor.Client/Pages/HostelRooms/HostelRoomsList.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSG9zdGVsUm9vbXNcSG9zdGVsUm9vbXNMaXN0LnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/dev/StudentsManagementBlazor/StudentsManagementBlazor/StudentsManagementBlazor.Client/Pages/Hostels/AddHostel.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSG9zdGVsc1xBZGRIb3N0ZWwucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/dev/StudentsManagementBlazor/StudentsManagementBlazor/StudentsManagementBlazor.Client/Pages/Hostels/DeleteHostel.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSG9zdGVsc1xEZWxldGVIb3N0ZWwucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/dev/StudentsManagementBlazor/StudentsManagementBlazor/StudentsManagementBlazor.Client/Pages/Hostels/EditHostel.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSG9zdGVsc1xFZGl0SG9zdGVsLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/dev/StudentsManagementBlazor/StudentsManagementBlazor/StudentsManagementBlazor.Client/Pages/Hostels/HosteslList.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSG9zdGVsc1xIb3N0ZXNsTGlzdC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/dev/StudentsManagementBlazor/StudentsManagementBlazor/StudentsManagementBlazor.Client/Pages/Parents/AddParent.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUGFyZW50c1xBZGRQYXJlbnQucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 

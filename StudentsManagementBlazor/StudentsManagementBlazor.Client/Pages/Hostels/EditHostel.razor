@@ -1,0 +1,93 @@
+﻿@page "/hostel/edit/{id:int}"
+@using StudentsManagementBlazor.Client.Services;
+@using StudentsManagementBlazor.Shared.Models
+@using StudentsManagementShared.Models
+@inject NavigationManager navigation;
+@inject IJSRuntime JsRuntime
+@rendermode InteractiveServer
+
+<h3>Update Hostel</h3>
+<hr />
+<div class="row">
+	<div class="com-md-12">
+		<EditForm Model="hostelobj" OnValidSubmit="UpdateHostel" FormName="updatehostel">
+			<DataAnnotationsValidator />
+			<ValidationSummary />
+			<div class="col-md-12">
+				<div class="row">
+					<div class="col-md-6">
+						<div class="form-group">
+							<label class="control-label">Hostel Name</label>
+							<InputText for="HostelName" class="form-control" @bind-Value="@hostelobj.HostelName" />
+							<ValidationMessage For="()=>hostelobj.HostelName" />
+						</div>
+					</div>
+					<div class="col-md-6">
+						<div class="form-group">
+							<label class="control-label">Hostel Address</label>
+							<InputText for="Address" class="form-control" @bind-Value="@hostelobj.Address" />
+							<ValidationMessage For="()=>hostelobj.Address" />
+						</div>
+					</div>
+					<div class="col-md-6">
+						<div class="form-group">
+							<label class="control-label">Hostel Description</label>
+							<InputTextArea for="Description" class="form-control" @bind-Value="@hostelobj.Description" />
+							<ValidationMessage For="()=>hostelobj.Description" />
+						</div>
+					</div>
+					<div class="col-md-6">
+						<div class="form-group">
+							<label class="control-label">Hostel Type</label>
+							<InputSelect for="HostelTypeId" class="form-control" @bind-Value="@hostelobj.HostelTypeId">
+								<option value="">Select Hostel Type</option>
+								@foreach (var hostel in HostelTypeCategories)
+								{
+									<option value="@hostel.Id">@hostel.Description</option>
+								}
+							</InputSelect>
+							<ValidationMessage For="()=>hostelobj.HostelTypeId" />
+						</div>
+					</div>
+					<div class="form-group mt-4">
+						<button type="submit" class="btn btn-primary">Update Hostel</button>
+						<button type="button" @onclick="Cancel" class="btn btn-danger">Cancel</button>
+					</div>
+				</div>
+			</div>
+		</EditForm>
+	</div>
+</div>
+
+@code {
+	[SupplyParameterFromForm]
+	public Hostel hostelobj { get; set; } = new();
+
+	[Parameter]
+	public int id { get; set; }
+
+	List<SystemCodeDetail> HostelTypeCategories = new List<SystemCodeDetail>();
+
+	protected override async Task OnInitializedAsync()
+	{
+		HostelTypeCategories = await SystemCodeDetailService.GetByCodeAsync("HostelTypes");
+
+		await LoadHostel();
+	}
+
+	private async Task LoadHostel()
+	{
+		hostelobj = await HostelService.GetByIdAsync(id);
+	}
+
+	protected async Task UpdateHostel()
+	{
+		var result = await HostelService.UpdateAsync(hostelobj);
+
+		navigation.NavigateTo("/hostel-list");
+	}
+	public void Cancel()
+	{
+		navigation.NavigateTo("/hostel-list");
+	}
+}
