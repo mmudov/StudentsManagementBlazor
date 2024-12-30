@@ -388,6 +388,99 @@ namespace StudentsManagementBlazor.Migrations
                     b.ToTable("BookIssuanceHistory");
                 });
 
+            modelBuilder.Entity("StudentsManagementShared.Models.Complaint", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("ComplaintBy")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("ComplaintDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("ComplaintId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("ComplaintTypeId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("CreatedById")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("CreatedOn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ModifiedById")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("ModifiedOn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("PhoneNumber")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("SourceId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("StatusId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ComplaintTypeId");
+
+                    b.HasIndex("SourceId");
+
+                    b.HasIndex("StatusId");
+
+                    b.ToTable("Complaints");
+                });
+
+            modelBuilder.Entity("StudentsManagementShared.Models.ComplaintNote", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("ActionStatusId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("ActionedOn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Attachment")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("ComplaintId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Notes")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ActionStatusId");
+
+                    b.HasIndex("ComplaintId");
+
+                    b.ToTable("ComplaintNotes");
+                });
+
             modelBuilder.Entity("StudentsManagementShared.Models.Country", b =>
                 {
                     b.Property<int>("Id")
@@ -885,6 +978,52 @@ namespace StudentsManagementBlazor.Migrations
                     b.Navigation("Status");
 
                     b.Navigation("Student");
+                });
+
+            modelBuilder.Entity("StudentsManagementShared.Models.Complaint", b =>
+                {
+                    b.HasOne("StudentsManagementShared.Models.SystemCodeDetail", "ComplaintType")
+                        .WithMany()
+                        .HasForeignKey("ComplaintTypeId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.HasOne("StudentsManagementShared.Models.SystemCodeDetail", "Source")
+                        .WithMany()
+                        .HasForeignKey("SourceId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.HasOne("StudentsManagementShared.Models.SystemCodeDetail", "Status")
+                        .WithMany()
+                        .HasForeignKey("StatusId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.Navigation("ComplaintType");
+
+                    b.Navigation("Source");
+
+                    b.Navigation("Status");
+                });
+
+            modelBuilder.Entity("StudentsManagementShared.Models.ComplaintNote", b =>
+                {
+                    b.HasOne("StudentsManagementShared.Models.SystemCodeDetail", "ActionStatus")
+                        .WithMany()
+                        .HasForeignKey("ActionStatusId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.HasOne("StudentsManagementShared.Models.Complaint", "Complaint")
+                        .WithMany()
+                        .HasForeignKey("ComplaintId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.Navigation("ActionStatus");
+
+                    b.Navigation("Complaint");
                 });
 
             modelBuilder.Entity("StudentsManagementShared.Models.Hostel", b =>

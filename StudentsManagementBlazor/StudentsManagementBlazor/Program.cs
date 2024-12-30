@@ -67,6 +67,8 @@ namespace StudentsManagementBlazor
             builder.Services.AddScoped<IGradeRepository, GradeRepository>();
             builder.Services.AddScoped<IHostelRepository, HostelRepository>();
             builder.Services.AddScoped<IHostelRoomRepository, HostelRoomRepository>();
+            builder.Services.AddScoped<IComplaintRepository, ComplaintRepository>();
+            builder.Services.AddScoped<IComplaintActionRepository, ComplaintActionRepository>();
 
             var app = builder.Build();
 

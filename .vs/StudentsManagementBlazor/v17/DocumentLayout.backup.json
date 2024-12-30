@@ -3,16 +3,8 @@
   "WorkspaceRootPath": "D:\\dev\\StudentsManagementBlazor\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{E504878B-5309-4843-9257-74F0D1F18455}|StudentsManagementBlazor\\StudentsManagementBlazor.Client\\StudentsManagementBlazor.Client.csproj|d:\\dev\\studentsmanagementblazor\\studentsmanagementblazor\\studentsmanagementblazor.client\\pages\\hostelrooms\\hostelroomslist.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{E504878B-5309-4843-9257-74F0D1F18455}|StudentsManagementBlazor\\StudentsManagementBlazor.Client\\StudentsManagementBlazor.Client.csproj|solutionrelative:studentsmanagementblazor\\studentsmanagementblazor.client\\pages\\hostelrooms\\hostelroomslist.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E504878B-5309-4843-9257-74F0D1F18455}|StudentsManagementBlazor\\StudentsManagementBlazor.Client\\StudentsManagementBlazor.Client.csproj|d:\\dev\\studentsmanagementblazor\\studentsmanagementblazor\\studentsmanagementblazor.client\\pages\\hostelrooms\\edithostelroom.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{E504878B-5309-4843-9257-74F0D1F18455}|StudentsManagementBlazor\\StudentsManagementBlazor.Client\\StudentsManagementBlazor.Client.csproj|solutionrelative:studentsmanagementblazor\\studentsmanagementblazor.client\\pages\\hostelrooms\\edithostelroom.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E504878B-5309-4843-9257-74F0D1F18455}|StudentsManagementBlazor\\StudentsManagementBlazor.Client\\StudentsManagementBlazor.Client.csproj|d:\\dev\\studentsmanagementblazor\\studentsmanagementblazor\\studentsmanagementblazor.client\\pages\\hostelrooms\\deletehostelroom.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{E504878B-5309-4843-9257-74F0D1F18455}|StudentsManagementBlazor\\StudentsManagementBlazor.Client\\StudentsManagementBlazor.Client.csproj|solutionrelative:studentsmanagementblazor\\studentsmanagementblazor.client\\pages\\hostelrooms\\deletehostelroom.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{1382402D-36E1-4766-AE2B-5B78D0DB2931}|StudentsManagementBlazor\\StudentsManagementBlazor\\StudentsManagementBlazor.csproj|d:\\dev\\studentsmanagementblazor\\studentsmanagementblazor\\studentsmanagementblazor\\components\\layout\\navmenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1382402D-36E1-4766-AE2B-5B78D0DB2931}|StudentsManagementBlazor\\StudentsManagementBlazor\\StudentsManagementBlazor.csproj|solutionrelative:studentsmanagementblazor\\studentsmanagementblazor\\components\\layout\\navmenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -21,48 +13,9 @@
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedWidth": 505,
-          "SelectedChildIndex": 0,
+          "DockedWidth": 276,
+          "SelectedChildIndex": -1,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "HostelRoomsList.razor",
-              "DocumentMoniker": "D:\\dev\\StudentsManagementBlazor\\StudentsManagementBlazor\\StudentsManagementBlazor.Client\\Pages\\HostelRooms\\HostelRoomsList.razor",
-              "RelativeDocumentMoniker": "StudentsManagementBlazor\\StudentsManagementBlazor.Client\\Pages\\HostelRooms\\HostelRoomsList.razor",
-              "ToolTip": "D:\\dev\\StudentsManagementBlazor\\StudentsManagementBlazor\\StudentsManagementBlazor.Client\\Pages\\HostelRooms\\HostelRoomsList.razor",
-              "RelativeToolTip": "StudentsManagementBlazor\\StudentsManagementBlazor.Client\\Pages\\HostelRooms\\HostelRoomsList.razor",
-              "ViewState": "AgIAACQAAAAAAAAAAAAAACwAAAA3AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-29T10:12:18.385Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "DeleteHostelRoom.razor",
-              "DocumentMoniker": "D:\\dev\\StudentsManagementBlazor\\StudentsManagementBlazor\\StudentsManagementBlazor.Client\\Pages\\HostelRooms\\DeleteHostelRoom.razor",
-              "RelativeDocumentMoniker": "StudentsManagementBlazor\\StudentsManagementBlazor.Client\\Pages\\HostelRooms\\DeleteHostelRoom.razor",
-              "ToolTip": "D:\\dev\\StudentsManagementBlazor\\StudentsManagementBlazor\\StudentsManagementBlazor.Client\\Pages\\HostelRooms\\DeleteHostelRoom.razor",
-              "RelativeToolTip": "StudentsManagementBlazor\\StudentsManagementBlazor.Client\\Pages\\HostelRooms\\DeleteHostelRoom.razor",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAATAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-29T10:09:41.105Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "EditHostelRoom.razor",
-              "DocumentMoniker": "D:\\dev\\StudentsManagementBlazor\\StudentsManagementBlazor\\StudentsManagementBlazor.Client\\Pages\\HostelRooms\\EditHostelRoom.razor",
-              "RelativeDocumentMoniker": "StudentsManagementBlazor\\StudentsManagementBlazor.Client\\Pages\\HostelRooms\\EditHostelRoom.razor",
-              "ToolTip": "D:\\dev\\StudentsManagementBlazor\\StudentsManagementBlazor\\StudentsManagementBlazor.Client\\Pages\\HostelRooms\\EditHostelRoom.razor",
-              "RelativeToolTip": "StudentsManagementBlazor\\StudentsManagementBlazor.Client\\Pages\\HostelRooms\\EditHostelRoom.razor",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAHEAAAArAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-29T10:04:36.317Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
@@ -82,16 +35,12 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
             }
           ]
         },
         {
-          "DockedWidth": 645,
-          "SelectedChildIndex": -1,
+          "DockedWidth": 505,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
@@ -108,6 +57,23 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{004be353-6879-467c-9d1e-9ac23cdf6d49}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "NavMenu.razor",
+              "DocumentMoniker": "D:\\dev\\StudentsManagementBlazor\\StudentsManagementBlazor\\StudentsManagementBlazor\\Components\\Layout\\NavMenu.razor",
+              "RelativeDocumentMoniker": "StudentsManagementBlazor\\StudentsManagementBlazor\\Components\\Layout\\NavMenu.razor",
+              "ToolTip": "D:\\dev\\StudentsManagementBlazor\\StudentsManagementBlazor\\StudentsManagementBlazor\\Components\\Layout\\NavMenu.razor",
+              "RelativeToolTip": "StudentsManagementBlazor\\StudentsManagementBlazor\\Components\\Layout\\NavMenu.razor",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAAB8AAAA+AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-30T10:00:39.978Z",
+              "EditorCaption": ""
             }
           ]
         },

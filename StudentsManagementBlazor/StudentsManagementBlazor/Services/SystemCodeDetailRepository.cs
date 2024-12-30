@@ -61,6 +61,18 @@ namespace StudentsManagementBlazor.Services
             return data;
         }
 
+        public async Task<SystemCodeDetail> GetByStatusCodeAsync(string code, string statuscode)
+        {
+            var data = await _context.SystemCodeDetails
+                .Include(x => x.SystemCode)
+                .Where(x => x.SystemCode.Code == code && x.Code == statuscode)
+                .FirstOrDefaultAsync();
+
+            if (data == null) return null;
+
+            return data;
+        }
+
         public async Task<SystemCodeDetail> UpdateAsync(SystemCodeDetail mod)
         {
             if (mod == null) return null;

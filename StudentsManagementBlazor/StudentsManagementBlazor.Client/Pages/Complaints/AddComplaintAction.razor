@@ -1,0 +1,120 @@
+﻿@page "/add-complaint-action/{id:int}"
+@using StudentsManagementBlazor.Client.Services;
+@using StudentsManagementBlazor.Shared.Models
+@using StudentsManagementShared.Models
+@inject NavigationManager navigation;
+@inject IJSRuntime JsRuntime
+@inject IConfiguration config
+@rendermode InteractiveServer
+
+<h3>Add Complaint Action</h3>
+
+<div class="row">
+	<div class="com-md-12">
+		<EditForm Model="complaintobjaction" OnValidSubmit="CreateComplaintAction" FormName="addComplaintAction">
+			<DataAnnotationsValidator />
+			<ValidationSummary />
+			<div class="col-md-12">
+				<div class="row">
+					<div class="col-md-6">
+						<div class="form-group">
+							<label class="control-label">Complaint Notes</label>
+							<InputTextArea for="Notes" class="form-control" @bind-Value="@complaintobjaction.Notes" />
+							<ValidationMessage For="()=>complaintobjaction.Notes" />
+						</div>
+					</div>
+					<div class="col-md-6">
+						<div class="form-group">
+							<label class="control-label">Complaint Status</label>
+							<InputSelect for="ActionStatusId" class="form-control" @bind-Value="@complaintobjaction.ActionStatusId">
+								<option value="">Select Room Type</option>
+								@foreach (var complaintstatus in ComplaintStatus)
+								{
+									<option value="@complaintstatus.Id">@complaintstatus.Description</option>
+								}
+							</InputSelect>
+							<ValidationMessage For="()=>complaintobjaction.ActionStatusId" />
+						</div>
+					</div>
+					<div class="col-md-6">
+						<div class="form-group">
+							<label class="control-label">Upload Photo</label>
+							<InputFile OnChange="@LoadFileUploads" class="form-control" accept=".png, .jpg, .jpeg" />
+							<ValidationMessage For="()=>complaintobjaction.Notes" />
+						</div>
+					</div>
+				</div>
+				<div class="form-group mt-4">
+					<button type="submit" class="btn btn-primary">Save Complaint Action</button>
+					<button type="button" @onclick="Cancel" class="btn btn-danger">Cancel</button>
+				</div>
+			</div>
+		</EditForm>
+	</div>
+</div>
+
+@code {
+	[SupplyParameterFromForm]
+	public ComplaintNote complaintobjaction { get; set; } = new();
+
+	List<SystemCodeDetail> ComplaintStatus = new List<SystemCodeDetail>();
+
+	[Parameter]
+	public int id { get; set; }
+
+	public IBrowserFile? file;
+
+	public string FileName { get; set; }
+
+	private async Task LoadFileUploads (InputFileChangeEventArgs ergs)
+	{
+		file = ergs.File;
+	}
+
+	private async Task<string> CaptureFile()
+	{
+		if (file is null)
+		{
+			return string.Empty;
+		}
+		else
+		{
+			FileName = Path.ChangeExtension(
+			Path.GetRandomFileName(),
+			Path.GetExtension(file.Name));
+
+			string path = Path.Combine(config.GetValue<string>("FileUploads")!, "MM", FileName);
+
+			string relativefilename = FileName;
+
+			Directory.CreateDirectory(Path.Combine(config.GetValue<String>("FileUploads")!, "MM"));
+
+			await using FileStream fs = new(path, FileMode.Create);
+			await file.OpenReadStream().CopyToAsync(fs);
+
+			return relativefilename;
+		}
+	}
+
+	protected override async Task OnInitializedAsync()
+	{
+		ComplaintStatus = await SystemCodeDetailService.GetByCodeAsync("ComplaintStatus");
+		complaintobjaction.ComplaintId = id;
+		complaintobjaction.Attachment = await CaptureFile(); ;
+		complaintobjaction.ActionedOn = DateTime.Now;
+	}
+
+	protected async Task CreateComplaintAction()
+	{
+		complaintobjaction.ComplaintId = id;
+		complaintobjaction.Attachment = await CaptureFile(); ;
+		complaintobjaction.ActionedOn = DateTime.Now;
+
+		var result = ComplaintActionService.AddAsync(complaintobjaction);
+		navigation.NavigateTo("/complaints-list");
+	}
+	public void Cancel()
+	{
+		navigation.NavigateTo("/complaints-list");
+	}
+}

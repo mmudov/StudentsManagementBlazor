@@ -21,6 +21,8 @@ namespace StudentsManagementBlazor.Data
         public DbSet<Grade> Grades { get; set; }
         public DbSet<Hostel> Hostels { get; set; }
         public DbSet<HostelRoom> HostelRooms { get; set; }
+        public DbSet<Complaint> Complaints { get; set; }
+        public DbSet<ComplaintNote> ComplaintNotes { get; set; }
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
