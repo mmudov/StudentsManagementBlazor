@@ -6,9 +6,11 @@
 @inject IJSRuntime JsRuntime
 @*@rendermode InteractiveAuto*@
 
+<h3>Issuances History List</h3>
+<hr />
 <div class="container">
 	<div class="row">
-		<p><a class="btn btn-success fload-end" href="/add-issuances-history">Add New Book Issuance</a></p>
+		<p><a class="btn btn-success float-end" href="/add-issuances-history">Add New Book Issuance</a></p>
 		<div class="col-md-12">
 			<div class="card">
 				<div class="card-header"></div>
@@ -76,9 +78,8 @@
 	private async Task LoadAllAllBookIssuancesHistory()
 	{
 		var data = await IssuanceService.GetAllAsync();
+		
 		var issuedBooks = data.Where(x => x.Status.Code == "Issued");
-
-		AllBookIssuancesHistory.Clear();
 
 		if (issuedBooks is null) return;
 

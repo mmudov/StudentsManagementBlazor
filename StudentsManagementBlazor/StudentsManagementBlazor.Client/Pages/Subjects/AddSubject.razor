@@ -6,7 +6,7 @@
 @inject IJSRuntime JsRuntime
 
 <h3>Add Subject</h3>
-
+<hr />
 <div class="row">
 	<div class="com-md-12">
 		<EditForm Model="subjectobj" OnValidSubmit="CreateSubject" FormName="addSubject">
@@ -31,7 +31,7 @@
 				</div>
 				<div class="form-group mt-4">
 					<button type="submit" class="btn btn-primary">Save Subject</button>
-					<button type="button" @onclick="Cancel" class="btn btn-danger">Cancel</button>
+					<a class="btn btn-danger" href="/subjects-list">Cancel</a>
 				</div>
 			</div>
 		</EditForm>
@@ -44,11 +44,10 @@
 
 	protected async Task CreateSubject()
 	{
+		subjectobj.CreatedOn = DateTime.Now;
+
 		var result = SubjectService.AddAsync(subjectobj);
-		navigation.NavigateTo("/subjects-list");
-	}
-	public void Cancel()
-	{
+
 		navigation.NavigateTo("/subjects-list");
 	}
 }

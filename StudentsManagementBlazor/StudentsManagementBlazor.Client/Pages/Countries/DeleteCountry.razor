@@ -46,6 +46,7 @@
     protected async Task Delete()
     {
         var result = await CountryService.DeleteAsync(id);
+
         navigation.NavigateTo("/countries-list");
     }
 

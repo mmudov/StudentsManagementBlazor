@@ -17,9 +17,9 @@ namespace StudentsManagementBlazor.Services
         public async Task<Complaint> AddAsync(Complaint mod)
         {
             mod.CreatedById = "MM";
-            mod.CreatedOn = DateTime.Now;
+            //mod.CreatedOn = DateTime.Now;
             mod.ModifiedById = "MM";
-            mod.ModifiedOn = DateTime.Now;
+            //mod.ModifiedOn = DateTime.Now;
 
             if (mod == null) return null;
 

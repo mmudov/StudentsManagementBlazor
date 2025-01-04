@@ -4,9 +4,11 @@
 @inject NavigationManager navigation;
 @inject IJSRuntime JsRuntime
 
+<h3>Countries List</h3>
+<hr />
 <div class="container">
 	<div class="row">
-		<p><a class="btn btn-success fload-end" href="/add-country">Add New Country</a></p>
+		<p><a class="btn btn-success float-end" href="/add-country">Add New Country</a></p>
 		<div class="col-md-12">
 			<div class="card">
 				<div class="card-header"></div>
@@ -70,6 +72,7 @@
 		if (countries is null) return;
 
 		AllCountries.Clear();
+
 		AllCountries.AddRange(countries);
 	}
 }

@@ -7,7 +7,6 @@
 @rendermode InteractiveServer
 
 <h3>Edit Parent</h3>
-
 <hr />
 <div class="row">
 	<div class="com-md-12">
@@ -142,6 +141,7 @@
 	protected async Task UpdateParent()
 	{
 		var result = await ParentService.UpdateAsync(parentobj);
+
 		navigation.NavigateTo("/parents-list");
 	}
 	public void Cancel()

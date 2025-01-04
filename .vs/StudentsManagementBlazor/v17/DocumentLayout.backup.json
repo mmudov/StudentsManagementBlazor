@@ -1,12 +1,7 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "D:\\dev\\StudentsManagementBlazor\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{1382402D-36E1-4766-AE2B-5B78D0DB2931}|StudentsManagementBlazor\\StudentsManagementBlazor\\StudentsManagementBlazor.csproj|d:\\dev\\studentsmanagementblazor\\studentsmanagementblazor\\studentsmanagementblazor\\components\\layout\\navmenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{1382402D-36E1-4766-AE2B-5B78D0DB2931}|StudentsManagementBlazor\\StudentsManagementBlazor\\StudentsManagementBlazor.csproj|solutionrelative:studentsmanagementblazor\\studentsmanagementblazor\\components\\layout\\navmenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -40,7 +35,7 @@
         },
         {
           "DockedWidth": 505,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": -1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -61,19 +56,6 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "NavMenu.razor",
-              "DocumentMoniker": "D:\\dev\\StudentsManagementBlazor\\StudentsManagementBlazor\\StudentsManagementBlazor\\Components\\Layout\\NavMenu.razor",
-              "RelativeDocumentMoniker": "StudentsManagementBlazor\\StudentsManagementBlazor\\Components\\Layout\\NavMenu.razor",
-              "ToolTip": "D:\\dev\\StudentsManagementBlazor\\StudentsManagementBlazor\\StudentsManagementBlazor\\Components\\Layout\\NavMenu.razor",
-              "RelativeToolTip": "StudentsManagementBlazor\\StudentsManagementBlazor\\Components\\Layout\\NavMenu.razor",
-              "ViewState": "AgIAABIAAAAAAAAAAAAAAB8AAAA+AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-30T10:00:39.978Z",
-              "EditorCaption": ""
             }
           ]
         },

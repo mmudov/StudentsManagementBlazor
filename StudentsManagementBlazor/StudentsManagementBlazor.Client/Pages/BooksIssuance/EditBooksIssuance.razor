@@ -112,11 +112,15 @@
         Class = await SystemCodeDetailService.GetByCodeAsync("Class");
         Books = await BookService.GetAllAsync();
         Students = await StudentService.GetAllStudentsAsync();
+		issuanceobj.CreatedOn = DateTime.Now;
     }
 
 	protected async Task UpdateBookIssuance()
     {
+		issuanceobj.CreatedOn = DateTime.Now;
+
 		var result = await IssuanceService.UpdateAsync(issuanceobj);
+
 		navigation.NavigateTo("/issuances-history-list");
     }
     public void Cancel()

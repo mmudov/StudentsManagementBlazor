@@ -58,7 +58,7 @@
 				</div>
 				<div class="form-group mt-4">
 					<button type="submit" class="btn btn-primary">Save Grade</button>
-					<button type="button" @onclick="Cancel" class="btn btn-danger">Cancel</button>
+					<a class="btn btn-danger" href="/grades-list">Cancel</a>
 				</div>
 			</div>
 		</EditForm>
@@ -71,12 +71,11 @@
 
 	protected async Task CreateGrade()
 	{
-		var result = await GradeService.AddAsync(gradeobj);
-		navigation.NavigateTo("/grades-list");
-	}
+		gradeobj.CreatedOn = DateTime.Now;
+		gradeobj.ModifiedOn = DateTime.Now;
 
-	public void Cancel()
-	{
+		var result = await GradeService.AddAsync(gradeobj);
+
 		navigation.NavigateTo("/grades-list");
 	}
 }

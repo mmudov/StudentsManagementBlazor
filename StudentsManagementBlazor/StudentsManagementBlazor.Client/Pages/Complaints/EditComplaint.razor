@@ -97,6 +97,8 @@
 		var pendingstatus = await SystemCodeDetailService.GetByStatusCodeAsync("ComplaintStatus", "Pending");
 		complaintobj.StatusId = pendingstatus.Id;
 		complaintobj.ComplaintId = complaintobj.ComplaintTypeId;
+		complaintobj.CreatedOn = DateTime.Now;
+		complaintobj.ModifiedOn = DateTime.Now;
 
 		await LoadComplaint();
 	}
@@ -107,7 +109,11 @@
 
 	protected async Task UpdateComplaint()
 	{
+		complaintobj.CreatedOn = DateTime.Now;
+		complaintobj.ModifiedOn = DateTime.Now;
+
 		var result = ComplaintService.UpdateAsync(complaintobj);
+
 		navigation.NavigateTo("/complaints-list");
 	}
 	public void Cancel()

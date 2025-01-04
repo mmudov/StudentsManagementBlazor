@@ -6,7 +6,7 @@
 @inject IJSRuntime JsRuntime
 @rendermode InteractiveServer
 
-<h3>Edit Book Issuance Details</h3>
+<h3>Return Book Issuance Details</h3>
 
 <hr />
 <div class="row">
@@ -125,6 +125,7 @@
 	{
 		//var result = await IssuanceService.UpdateAsync(issuanceobj);
 		var result = await IssuanceService.ReturnBookUpdateAsync(issuanceobj);
+
 		navigation.NavigateTo("/issuances-history-list");
 	}
 	public void Cancel()

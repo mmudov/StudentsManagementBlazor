@@ -44,7 +44,7 @@
 				</div>
 				<div class="form-group mt-4">
 					<button type="submit" class="btn btn-primary">Save Academic Year</button>
-					<button type="button" @onclick="Cancel" class="btn btn-danger">Cancel</button>
+					<a class="btn btn-danger" href="/academic-years-list">Cancel</a>
 				</div>
 			</div>
 		</EditForm>
@@ -58,11 +58,7 @@
 	protected async Task CreateAcademicYear()
 	{
 		var result = await AcademicYearService.AddAsync(academicyearobj);
-		navigation.NavigateTo("/academic-years-list");
-	}
 
-	public void Cancel()
-	{
 		navigation.NavigateTo("/academic-years-list");
 	}
 }

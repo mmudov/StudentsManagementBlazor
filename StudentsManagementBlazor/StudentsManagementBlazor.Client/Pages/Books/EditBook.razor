@@ -82,6 +82,7 @@
 	protected async Task UpdateBook()
 	{
 		var result = BookService.UpdateAsync(bookobj);
+
 		navigation.NavigateTo("/books-list");
 	}
 	public void Cancel()

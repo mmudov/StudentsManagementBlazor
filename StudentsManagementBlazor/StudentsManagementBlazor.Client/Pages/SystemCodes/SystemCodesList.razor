@@ -4,11 +4,11 @@
 @inject NavigationManager navigation;
 @inject IJSRuntime JsRuntime
 
-<h3>EditSystemCodes</h3>
-
+<h3>System Codes List</h3>
+<hr />
 <div class="container">
 	<div class="row">
-		<p><a class="btn btn-success fload-end" href="/add-systemCode">Add New System Code</a></p>
+		<p><a class="btn btn-success float-end" href="/add-systemCode">Add New System Code</a></p>
 		<div class="col-md-12">
 			<div class="card">
 				<div class="card-header"></div>
@@ -70,6 +70,7 @@
 		if (systemcodes is null) return;
 
 		AllSystemCodes.Clear();
+
 		AllSystemCodes.AddRange(systemcodes);
 	}
 }

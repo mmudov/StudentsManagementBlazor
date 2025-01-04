@@ -83,7 +83,7 @@
 				</div>
 				<div class="form-group mt-4">
 					<button type="submit" class="btn btn-primary">Save Issuance History</button>
-					<button type="button" @onclick="Cancel" class="btn btn-danger">Cancel</button>
+					<a class="btn btn-danger" href="/issuances-history-list">Cancel</a>
 				</div>
 			</div>
 		</EditForm>
@@ -105,17 +105,15 @@
 		Class = await SystemCodeDetailService.GetByCodeAsync("Class");
 		Books = await BookService.GetAllAsync();
 		Students = await StudentService.GetAllStudentsAsync();
+		issuanceobj.CreatedOn = DateTime.Now;
 	}
 
 	protected async Task CreateIssuance()
 	{
+		issuanceobj.CreatedOn = DateTime.Now;
+
 		var result = await IssuanceService.AddAsync(issuanceobj);
 
-		navigation.NavigateTo("/issuances-history-list");
-	}
-
-	public void Cancel()
-	{
 		navigation.NavigateTo("/issuances-history-list");
 	}
 }

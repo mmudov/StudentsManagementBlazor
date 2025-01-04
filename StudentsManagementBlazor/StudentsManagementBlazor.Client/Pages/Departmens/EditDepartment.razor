@@ -49,6 +49,8 @@
 
 	protected override async Task OnInitializedAsync()
 	{
+		departmentobj.CreatedOn = DateTime.Now;
+
 		await LoadDepartment();
 	}
 	public async Task LoadDepartment()
@@ -58,7 +60,10 @@
 
 	protected async Task UpdateDepartment()
 	{
+		departmentobj.CreatedOn = DateTime.Now;
+
 		var result = DepartmentService.UpdateAsync(departmentobj);
+
 		navigation.NavigateTo("/departments-list");
 	}
 	public void Cancel()

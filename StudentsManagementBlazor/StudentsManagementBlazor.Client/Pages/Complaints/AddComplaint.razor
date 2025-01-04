@@ -71,7 +71,7 @@
 				</div>
 				<div class="form-group mt-4">
 					<button type="submit" class="btn btn-primary">Save Complaint</button>
-					<button type="button" @onclick="Cancel" class="btn btn-danger">Cancel</button>
+					<a class="btn btn-danger" href="/complaints-list">Cancel</a>
 				</div>
 			</div>
 		</EditForm>
@@ -92,15 +92,17 @@
 		var pendingstatus = await SystemCodeDetailService.GetByStatusCodeAsync("ComplaintStatus", "Pending");
 		complaintobj.StatusId = pendingstatus.Id;
 		complaintobj.ComplaintId = complaintobj.ComplaintTypeId;
+		complaintobj.CreatedOn = DateTime.Now;
+		complaintobj.ModifiedOn = DateTime.Now;
 	}
 
 	protected async Task CreateComplaint()
 	{
+		complaintobj.CreatedOn = DateTime.Now;
+		complaintobj.ModifiedOn = DateTime.Now;
+
 		var result = ComplaintService.AddAsync(complaintobj);
-		navigation.NavigateTo("/complaints-list");
-	}
-	public void Cancel()
-	{
+
 		navigation.NavigateTo("/complaints-list");
 	}
 }

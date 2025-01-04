@@ -8,7 +8,6 @@
 
 
 <h3>Edit Subject</h3>
-
 <hr />
 <div class="row">
 	<div class="com-md-12">
@@ -49,6 +48,8 @@
 
 	protected override async Task OnInitializedAsync()
 	{
+		subjectobj.CreatedOn = DateTime.Now;
+
 		await LoadSubject();
 	}
 	public async Task LoadSubject()
@@ -58,7 +59,10 @@
 
 	protected async Task UpdateSubject()
 	{
+		subjectobj.CreatedOn = DateTime.Now;
+
 		var result = SubjectService.UpdateAsync(subjectobj);
+
 		navigation.NavigateTo("/subjects-list");
 	}
 	public void Cancel()

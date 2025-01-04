@@ -70,7 +70,7 @@
 				</div>
 				<div class="form-group mt-4">
 					<button type="submit" class="btn btn-primary">Save Room Details</button>
-					<button type="button" @onclick="Cancel" class="btn btn-danger">Cancel</button>
+					<a class="btn btn-danger" href="/hostel-rooms-list">Cancel</a>
 				</div>
 			</div>
 		</EditForm>
@@ -94,11 +94,7 @@
 	protected async Task CreateHostelRoom()
 	{
 		var result = await HostelRoomService.AddAsync(hostelroomobj);
-		navigation.NavigateTo("/hostel-rooms-list");
-	}
 
-	public void Cancel()
-	{
 		navigation.NavigateTo("/hostel-rooms-list");
 	}
 }

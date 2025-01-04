@@ -117,6 +117,7 @@
 		complaintobjaction.ActionedOn = DateTime.Now;
 
 		var result = ComplaintActionService.UpdateAsync(complaintobjaction);
+
 		navigation.NavigateTo("/complaint-actions-list");
 	}
 

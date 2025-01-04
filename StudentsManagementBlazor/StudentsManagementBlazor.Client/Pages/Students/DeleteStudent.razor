@@ -65,6 +65,7 @@
     protected async Task Delete()
     {
         var result = await StudentService.DeleteStudentAsync(id);
+
         navigation.NavigateTo("/students-list");
     }
 

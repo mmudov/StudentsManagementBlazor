@@ -5,9 +5,11 @@
 @inject IJSRuntime JsRuntime
 @*@rendermode InteractiveAuto*@
 
+<h3>Students List</h3>
+<hr />
 <div class="container">
 	<div class="row">
-		<p><a class="btn btn-success fload-end" href="/add-student">Add New Student</a></p>
+		<p><a class="btn btn-success float-end" href="/add-student">Add New Student</a></p>
 		<div class="col-md-12">
 			<div class="card">
 				<div class="card-header"></div>
@@ -75,6 +77,7 @@
 	private async Task LoadAllStudents()
 	{
 		var students = await StudentService.GetAllStudentsAsync();
+
 		AllStudents.Clear();
 
 		if (students is null) return;

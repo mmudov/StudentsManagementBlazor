@@ -15,8 +15,8 @@ namespace StudentsManagementBlazor.Services
         }
         public async Task<Subject> AddAsync(Subject mod)
         {
-            mod.CreatedById = "MM Code";
-            mod.CreatedOn = DateTime.Now;
+            mod.CreatedById = "MM";
+            //mod.CreatedOn = DateTime.Now;
 
             if (mod == null) return null;
 

@@ -71,6 +71,7 @@
 	protected override async Task OnInitializedAsync()
 	{
 		HostelTypeCategories = await SystemCodeDetailService.GetByCodeAsync("HostelTypes");
+		hostelobj.CreatedOn = DateTime.Now;
 
 		await LoadHostel();
 	}
@@ -82,6 +83,8 @@
 
 	protected async Task UpdateHostel()
 	{
+		hostelobj.CreatedOn = DateTime.Now;
+
 		var result = await HostelService.UpdateAsync(hostelobj);
 
 		navigation.NavigateTo("/hostel-list");

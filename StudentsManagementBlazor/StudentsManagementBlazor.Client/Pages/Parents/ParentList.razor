@@ -6,9 +6,11 @@
 @inject IJSRuntime JsRuntime
 @*@rendermode InteractiveAuto*@
 
+<h3>Parents List</h3>
+<hr />
 <div class="container">
 	<div class="row">
-		<p><a class="btn btn-success fload-end" href="/add-parent">Add New Parent</a></p>
+		<p><a class="btn btn-success float-end" href="/add-parent">Add New Parent</a></p>
 		<div class="col-md-12">
 			<div class="card">
 				<div class="card-header"></div>
@@ -94,6 +96,7 @@
 	private async Task DeleteParent(int Id)
 	{
 		var result = await ParentService.DeleteAsync(Id);
+
 		await LoadAllParents();
 	}
 }

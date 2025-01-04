@@ -46,7 +46,7 @@
 				</div>
 				<div class="form-group mt-4">
 					<button type="submit" class="btn btn-primary">Save Complaint Action</button>
-					<button type="button" @onclick="Cancel" class="btn btn-danger">Cancel</button>
+					<a class="btn btn-danger" href="/complaints-list">Cancel</a>
 				</div>
 			</div>
 		</EditForm>
@@ -111,10 +111,7 @@
 		complaintobjaction.ActionedOn = DateTime.Now;
 
 		var result = ComplaintActionService.AddAsync(complaintobjaction);
-		navigation.NavigateTo("/complaints-list");
-	}
-	public void Cancel()
-	{
+
 		navigation.NavigateTo("/complaints-list");
 	}
 }

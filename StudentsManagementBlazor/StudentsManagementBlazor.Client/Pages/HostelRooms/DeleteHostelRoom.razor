@@ -54,6 +54,7 @@
     protected async Task Delete()
     {
         var result = await HostelRoomService.DeleteAsync(id);
+
         navigation.NavigateTo("/hostel-rooms-list");
     }
 

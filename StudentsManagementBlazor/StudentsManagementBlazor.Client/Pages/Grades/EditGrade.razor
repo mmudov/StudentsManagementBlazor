@@ -76,6 +76,9 @@
 
 	protected override async Task OnInitializedAsync()
 	{
+		gradeobj.CreatedOn = DateTime.Now;
+		gradeobj.ModifiedOn = DateTime.Now;
+
 		await LoadGrades();
 	}
 
@@ -86,6 +89,9 @@
 
 	protected async Task UpdateGrade()
 	{
+		gradeobj.CreatedOn = DateTime.Now;
+		gradeobj.ModifiedOn = DateTime.Now;
+
 		var result = await GradeService.UpdateAsync(gradeobj);
 
 		navigation.NavigateTo("/grades-list");

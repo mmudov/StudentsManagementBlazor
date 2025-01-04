@@ -6,7 +6,6 @@
 @inject IJSRuntime JsRuntime
 
 <h3>Add System Code</h3>
-
 <hr />
 <div class="row">
 	<div class="com-md-12">
@@ -32,7 +31,7 @@
 				</div>
 				<div class="form-group mt-4">
 					<button type="submit" class="btn btn-primary">Save System Code</button>
-					<button type="button" @onclick="Cancel" class="btn btn-danger">Cancel</button>
+					<a class="btn btn-danger" href="/systemcodes-list">Cancel</a>
 				</div>
 			</div>
 		</EditForm>
@@ -47,11 +46,6 @@
 	{
 		var result = await SystemCodeService.AddAsync(systemcodeobj);
 
-		navigation.NavigateTo("/systemcodes-list");
-	}
-
-	public void Cancel()
-	{
 		navigation.NavigateTo("/systemcodes-list");
 	}
 }

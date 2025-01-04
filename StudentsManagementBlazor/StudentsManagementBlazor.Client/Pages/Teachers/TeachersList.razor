@@ -6,10 +6,10 @@
 @inject IJSRuntime JsRuntime
 
 <h3>Teachers List</h3>
-
+<hr />
 <div class="container">
 	<div class="row">
-		<p><a class="btn btn-success fload-end" href="/add-teacher">Add New Teacher</a></p>
+		<p><a class="btn btn-success float-end" href="/add-teacher">Add New Teacher</a></p>
 		<div class="col-md-12">
 			<div class="card">
 				<div class="card-header"></div>
@@ -91,6 +91,7 @@
 	private async Task DeleteTeacher(int Id)
 	{
 		var result = await ParentService.DeleteAsync(Id);
+
 		await LoadAllTeachers();
 	}
 }

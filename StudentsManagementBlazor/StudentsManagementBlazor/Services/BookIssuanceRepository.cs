@@ -22,7 +22,7 @@ namespace StudentsManagementBlazor.Services
 
             mod.StatusId = issueStatus.Id;
             mod.CreatedById = "MM";
-            mod.CreatedOn = DateTime.Now;
+            //mod.CreatedOn = DateTime.Now;
 
             if (mod == null) return null;
 

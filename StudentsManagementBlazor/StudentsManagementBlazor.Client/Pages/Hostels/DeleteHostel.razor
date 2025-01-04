@@ -50,6 +50,7 @@
     protected async Task Delete()
     {
         var result = await HostelService.DeleteAsync(id);
+
         navigation.NavigateTo("/hostel-list");
     }
 
