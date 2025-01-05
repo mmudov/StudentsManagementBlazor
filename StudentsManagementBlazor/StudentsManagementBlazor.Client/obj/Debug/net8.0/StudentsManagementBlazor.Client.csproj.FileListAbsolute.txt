@@ -1059,8 +1059,6 @@ D:\dev\StudentsManagementBlazor\StudentsManagementBlazor\StudentsManagementBlazo
 D:\dev\StudentsManagementBlazor\StudentsManagementBlazor\StudentsManagementBlazor.Client\obj\Debug\net8.0\compressed\keqjm0vtj6-tptq2av103.gz
 D:\dev\StudentsManagementBlazor\StudentsManagementBlazor\StudentsManagementBlazor.Client\obj\Debug\net8.0\compressed\cpagob8fce-lfu7j35m59.gz
 D:\dev\StudentsManagementBlazor\StudentsManagementBlazor\StudentsManagementBlazor.Client\obj\Debug\net8.0\compressed\ezvharsjpw-oyz0vx2fzb.gz
-D:\dev\StudentsManagementBlazor\StudentsManagementBlazor\StudentsManagementBlazor.Client\obj\Debug\net8.0\compressed\jquwy9x6rh-ak0mwqqogr.gz
-D:\dev\StudentsManagementBlazor\StudentsManagementBlazor\StudentsManagementBlazor.Client\obj\Debug\net8.0\compressed\qswxb8kije-zred9cagu6.gz
 D:\dev\StudentsManagementBlazor\StudentsManagementBlazor\StudentsManagementBlazor.Client\obj\Debug\net8.0\staticwebassets.build.json
 D:\dev\StudentsManagementBlazor\StudentsManagementBlazor\StudentsManagementBlazor.Client\obj\Debug\net8.0\staticwebassets.development.json
 D:\dev\StudentsManagementBlazor\StudentsManagementBlazor\StudentsManagementBlazor.Client\obj\Debug\net8.0\staticwebassets.build.endpoints.json
@@ -1076,6 +1074,8 @@ D:\dev\StudentsManagementBlazor\StudentsManagementBlazor\StudentsManagementBlazo
 D:\dev\StudentsManagementBlazor\StudentsManagementBlazor\StudentsManagementBlazor.Client\obj\Debug\net8.0\refint\StudentsManagementBlazor.Client.dll
 D:\dev\StudentsManagementBlazor\StudentsManagementBlazor\StudentsManagementBlazor.Client\obj\Debug\net8.0\StudentsManagementBlazor.Client.pdb
 D:\dev\StudentsManagementBlazor\StudentsManagementBlazor\StudentsManagementBlazor.Client\obj\Debug\net8.0\ref\StudentsManagementBlazor.Client.dll
-D:\dev\StudentsManagementBlazor\StudentsManagementBlazor\StudentsManagementBlazor.Client\obj\Debug\net8.0\compressed\u3c38ay9ci-0u97q0cyjp.gz
-D:\dev\StudentsManagementBlazor\StudentsManagementBlazor\StudentsManagementBlazor.Client\obj\Debug\net8.0\compressed\77bijhoply-s9v4utehu6.gz
-D:\dev\StudentsManagementBlazor\StudentsManagementBlazor\StudentsManagementBlazor.Client\obj\Debug\net8.0\compressed\va4nsgi3dl-735a4ns19s.gz
+D:\dev\StudentsManagementBlazor\StudentsManagementBlazor\StudentsManagementBlazor.Client\obj\Debug\net8.0\compressed\jquwy9x6rh-xo3bqri4i1.gz
+D:\dev\StudentsManagementBlazor\StudentsManagementBlazor\StudentsManagementBlazor.Client\obj\Debug\net8.0\compressed\qswxb8kije-oz5b3e3ex1.gz
+D:\dev\StudentsManagementBlazor\StudentsManagementBlazor\StudentsManagementBlazor.Client\obj\Debug\net8.0\compressed\u3c38ay9ci-ic1tf6id5i.gz
+D:\dev\StudentsManagementBlazor\StudentsManagementBlazor\StudentsManagementBlazor.Client\obj\Debug\net8.0\compressed\77bijhoply-gaes5wptqs.gz
+D:\dev\StudentsManagementBlazor\StudentsManagementBlazor\StudentsManagementBlazor.Client\obj\Debug\net8.0\compressed\va4nsgi3dl-80aw3x6e4r.gz
