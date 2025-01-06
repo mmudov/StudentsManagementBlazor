@@ -120,6 +120,34 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ291bnRyaWVzXEVkaXRDb3VudHJ5LnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/dev/StudentsManagementBlazor/StudentsManagementBlazor/StudentsManagementBlazor.Client/Pages/Dashborads/AcademicsDashborad.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRGFzaGJvcmFkc1xBY2FkZW1pY3NEYXNoYm9yYWQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/dev/StudentsManagementBlazor/StudentsManagementBlazor/StudentsManagementBlazor.Client/Pages/Dashborads/FrontOfficeDashborad.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRGFzaGJvcmFkc1xGcm9udE9mZmljZURhc2hib3JhZC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/dev/StudentsManagementBlazor/StudentsManagementBlazor/StudentsManagementBlazor.Client/Pages/Dashborads/HostelsDashborad.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRGFzaGJvcmFkc1xIb3N0ZWxzRGFzaGJvcmFkLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/dev/StudentsManagementBlazor/StudentsManagementBlazor/StudentsManagementBlazor.Client/Pages/Dashborads/LibraryDashborad.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRGFzaGJvcmFkc1xMaWJyYXJ5RGFzaGJvcmFkLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/dev/StudentsManagementBlazor/StudentsManagementBlazor/StudentsManagementBlazor.Client/Pages/Dashborads/ScaffoldDashborad.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRGFzaGJvcmFkc1xTY2FmZm9sZERhc2hib3JhZC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/dev/StudentsManagementBlazor/StudentsManagementBlazor/StudentsManagementBlazor.Client/Pages/Dashborads/SystemmAdministrationDashborad.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRGFzaGJvcmFkc1xTeXN0ZW1tQWRtaW5pc3RyYXRpb25EYXNoYm9yYWQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/dev/StudentsManagementBlazor/StudentsManagementBlazor/StudentsManagementBlazor.Client/Pages/Dashborads/SystemSettingsDashborad.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRGFzaGJvcmFkc1xTeXN0ZW1TZXR0aW5nc0Rhc2hib3JhZC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/dev/StudentsManagementBlazor/StudentsManagementBlazor/StudentsManagementBlazor.Client/Pages/Departmens/AddDepartment.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRGVwYXJ0bWVuc1xBZGREZXBhcnRtZW50LnJhem9y
 build_metadata.AdditionalFiles.CssScope = 

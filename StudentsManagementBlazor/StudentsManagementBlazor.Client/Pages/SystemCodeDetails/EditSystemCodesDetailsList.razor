@@ -29,6 +29,19 @@
 							<ValidationMessage For="()=>systemcodeDetailobj.Description" />
 						</div>
 					</div>
+					<div class="col-md-6">
+						<div class="form-group">
+							<label class="control-label">System Code</label>
+							<InputSelect for="SystemCodeId" class="form-control" @bind-Value="@systemcodeDetailobj.SystemCodeId">
+								<option value="">Select System Code</option>
+								@foreach (var systemcode in SystemCodes)
+								{
+									<option value="@systemcode.Id">@systemcode.Description</option>
+								}
+							</InputSelect>
+							<ValidationMessage For="()=>systemcodeDetailobj.SystemCodeId" />
+						</div>
+					</div>
 				</div>
 				<div class="form-group mt-4">
 					<button type="submit" class="btn btn-primary">Update System Code</button>
@@ -46,8 +59,12 @@
 	[Parameter]
 	public int id { get; set; }
 
+	List<SystemCode> SystemCodes = new List<SystemCode>();
+
 	protected override async Task OnInitializedAsync()
 	{
+		SystemCodes = await SystemCodeService.GetAllAsync();
+
 		await LoadSystemCodeDetail();
 	}
 

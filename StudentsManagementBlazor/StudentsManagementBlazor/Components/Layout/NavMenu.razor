@@ -1,6 +1,8 @@
-﻿@implements IDisposable
+﻿@*@implements IDisposable
 
 @inject NavigationManager NavigationManager
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
 
 <div class="top-row ps-3 navbar navbar-dark">
     <div class="container-fluid">
@@ -37,7 +39,6 @@
         <div class="nav-item px-3">
             <NavLink class="nav-link" href="students-list">
                 <div class="align-items: center">
-                    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
                     <span class="bi bi-mortarboard-fill" aria-hidden="true" style="font-size: 1.5em;"></span> Students
                 </div>
             </NavLink>
@@ -226,5 +227,342 @@
     {
         NavigationManager.LocationChanged -= OnLocationChanged;
     }
-}
+}*@
 
+@inject NavigationManager NavigationManager
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+<div class="top-row ps-3 navbar navbar-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="">StudentsManagementBlazor</a>
+        <button title="Navigation menu" class="navbar-toggler" @onclick="ToggleNavMenu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    </div>
+</div>
+
+<div class="@NavMenuCssClass nav-scrollable" @onclick="ToggleNavMenu">
+    @{
+        var currentUrl = NavigationManager.Uri;
+        var uri = new Uri(currentUrl);
+        var baseUrl = uri.GetLeftPart(UriPartial.Authority);
+    }
+    <nav class="flex-column">
+        <div class="nav-item px-3">
+            <NavLink class="nav-link" href="" Match="NavLinkMatch.All">
+                <span class="bi bi-house-door-fill-nav-menu" aria-hidden="true"></span> Home
+            </NavLink>
+        </div>
+
+        <div class="nav-item px-3">
+            @{
+                var checkString1 = baseUrl + "/front-office-dashborad";
+                var checkString2 = baseUrl + "/complaints-list";
+                var checkString3 = baseUrl + "/complaint-actions-list";
+            }
+            <NavLink class="nav-link" href="/front-office-dashborad">
+                <div class="align-items: center">
+                    <span class="bi bi-list-ul" aria-hidden="true" style="font-size: 1.5em;"></span> Front Office
+                </div>
+            </NavLink>
+            @if (currentUrl == checkString1 || currentUrl == checkString2 || currentUrl == checkString3)
+            {
+                <div class="nav-item px-3">
+                    <NavLink class="nav-link" href="complaints-list">
+                        <div class="align-items: center">
+                            <span class="bi bi-person-exclamation" aria-hidden="true" style="font-size: 1.5em;"></span> Complaints
+                        </div>
+                    </NavLink>
+                </div>
+
+                <div class="nav-item px-3">
+                    <NavLink class="nav-link" href="complaint-actions-list">
+                        <div class="align-items: center">
+                            <span class="bi bi-person-fill-exclamation" aria-hidden="true" style="font-size: 1.5em;"></span> Complaint Actions
+                        </div>
+                    </NavLink>
+                </div>
+            }
+        </div>
+
+        <div class="nav-item px-3">
+            @{
+                var checkString4 = baseUrl + "/academics-dashborad";
+                var checkString5 = baseUrl + "/students-list";
+                var checkString6 = baseUrl + "/parents-list";
+                var checkString7 = baseUrl + "/teachers-list";
+                var checkString8 = baseUrl + "/subjects-list";
+                var checkString9 = baseUrl + "/departments-list";
+            }
+            <NavLink class="nav-link" href="/academics-dashborad">
+                <div class="align-items: center">
+                    <span class="bi bi-list-ul" aria-hidden="true" style="font-size: 1.5em;"></span> Academics
+                </div>
+            </NavLink>
+            @if (currentUrl == checkString4 || currentUrl == checkString5 || currentUrl == checkString6 || currentUrl == checkString7 || currentUrl == checkString8 || currentUrl == checkString9)
+            {
+                <div class="nav-item px-3">
+                    <NavLink class="nav-link" href="students-list">
+                        <div class="align-items: center">
+                            <span class="bi bi-mortarboard-fill" aria-hidden="true" style="font-size: 1.5em;"></span> Students
+                        </div>
+                    </NavLink>
+                </div>
+
+                <div class="nav-item px-3">
+                    <NavLink class="nav-link" href="parents-list">
+                        <div class="align-items: center">
+                            <span class="bi bi-person-vcard-fill" aria-hidden="true" style="font-size: 1.5em;"></span> Parents
+                        </div>
+                    </NavLink>
+                </div>
+
+                <div class="nav-item px-3">
+                    <NavLink class="nav-link" href="teachers-list">
+                        <div class="align-items: center">
+                            <span class="bi bi-person-vcard-fill" aria-hidden="true" style="font-size: 1.5em;"></span> Teachers
+                        </div>
+                    </NavLink>
+                </div>
+
+                <div class="nav-item px-3">
+                    <NavLink class="nav-link" href="subjects-list">
+                        <div class="align-items: center">
+                            <span class="bi bi-book" aria-hidden="true" style="font-size: 1.5em;"></span> Subjects
+                        </div>
+                    </NavLink>
+                </div>
+
+                <div class="nav-item px-3">
+                    <NavLink class="nav-link" href="departments-list">
+                        <div class="align-items: center">
+                            <span class="bi bi-bezier" aria-hidden="true" style="font-size: 1.5em;"></span> Departmens
+                        </div>
+                    </NavLink>
+                </div>
+            }
+        </div>
+
+        <div class="nav-item px-3">
+            @{
+                var checkString10 = baseUrl + "/library-dashborad";
+                var checkString11 = baseUrl + "/books-list";
+                var checkString12 = baseUrl + "/issuances-history-list";
+                var checkString13 = baseUrl + "/returned-history-list";
+            }
+            <NavLink class="nav-link" href="/library-dashborad">
+                <div class="align-items: center">
+                    <span class="bi bi-list-ul" aria-hidden="true" style="font-size: 1.5em;"></span> Library
+                </div>
+            </NavLink>
+            @if (currentUrl == checkString10 || currentUrl == checkString11 || currentUrl == checkString12 || currentUrl == checkString13)
+            {
+                <div class="nav-item px-3">
+                    <NavLink class="nav-link" href="books-list">
+                        <div class="align-items: center">
+                            <span class="bi bi-journals" aria-hidden="true" style="font-size: 1.5em;"></span> Books
+                        </div>
+                    </NavLink>
+                </div>
+
+                <div class="nav-item px-3">
+                    <NavLink class="nav-link" href="issuances-history-list">
+                        <div class="align-items: center">
+                            <span class="bi bi-journal-bookmark-fill" aria-hidden="true" style="font-size: 1.5em;"></span> Issue Book
+                        </div>
+                    </NavLink>
+                </div>
+
+                <div class="nav-item px-3">
+                    <NavLink class="nav-link" href="returned-history-list">
+                        <div class="align-items: center">
+                            <span class="bi bi-journals" aria-hidden="true" style="font-size: 1.5em;"></span> Returned Books
+                        </div>
+                    </NavLink>
+                </div>
+            }
+        </div>
+
+        <div class="nav-item px-3">
+            @{
+                var checkString14 = baseUrl + "/hostels-dashborad";
+                var checkString15 = baseUrl + "/hostel-list";
+                var checkString16 = baseUrl + "/hostel-rooms-list";
+            }
+            <NavLink class="nav-link" href="/hostels-dashborad">
+                <div class="align-items: center">
+                    <span class="bi bi-list-ul" aria-hidden="true" style="font-size: 1.5em;"></span> Hostels
+                </div>
+            </NavLink>
+            @if (currentUrl == checkString14 || currentUrl == checkString15 || currentUrl == checkString16)
+            {
+                <div class="nav-item px-3">
+                    <NavLink class="nav-link" href="hostel-list">
+                        <div class="align-items: center">
+                            <span class="bi bi-house" aria-hidden="true" style="font-size: 1.5em;"></span> Hostel List
+                        </div>
+                    </NavLink>
+                </div>
+
+                <div class="nav-item px-3">
+                    <NavLink class="nav-link" href="hostel-rooms-list">
+                        <div class="align-items: center">
+                            <span class="bi bi-geo-alt-fill" aria-hidden="true" style="font-size: 1.5em;"></span> Hostel Rooms
+                        </div>
+                    </NavLink>
+                </div>
+            }
+        </div>
+
+        <div class="nav-item px-3">
+            @{
+                var checkString17 = baseUrl + "/system-settings-dashborad";
+                var checkString18 = baseUrl + "/countries-list";
+                var checkString19 = baseUrl + "/grades-list";
+                var checkString20 = baseUrl + "/systemcodes-list";
+                var checkString21 = baseUrl + "/systemcodesdetails-list";
+            }
+            <NavLink class="nav-link" href="/system-settings-dashborad">
+                <div class="align-items: center">
+                    <span class="bi bi-list-ul" aria-hidden="true" style="font-size: 1.5em;"></span> Systemm Settings
+                </div>
+            </NavLink>
+            @if (currentUrl == checkString17 || currentUrl == checkString18 || currentUrl == checkString19 || currentUrl == checkString20 || currentUrl == checkString21)
+            {
+                <div class="nav-item px-3">
+                    <NavLink class="nav-link" href="countries-list">
+                        <div class="align-items: center">
+                            <span class="bi bi-flag-fill" aria-hidden="true" style="font-size: 1.5em;"></span> Countries
+                        </div>
+                    </NavLink>
+                </div>
+
+                <div class="nav-item px-3">
+                    <NavLink class="nav-link" href="grades-list">
+                        <div class="align-items: center">
+                            <span class="bi bi-card-checklist" aria-hidden="true" style="font-size: 1.5em;"></span> Grades
+                        </div>
+                    </NavLink>
+                </div>
+
+                <div class="nav-item px-3">
+                    <NavLink class="nav-link" href="systemcodes-list">
+                        <div class="align-items: center">
+                            <span class="bi bi-list" aria-hidden="true" style="font-size: 1.5em;"></span> System Codes
+                        </div>
+                    </NavLink>
+                </div>
+
+                <div class="nav-item px-3">
+                    <NavLink class="nav-link" href="systemcodesdetails-list">
+                        <div class="align-items: center">
+                            <span class="bi bi-list" aria-hidden="true" style="font-size: 1.5em;"></span> System Code Details
+                        </div>
+                    </NavLink>
+                </div>
+            }
+        </div>
+
+        <div class="nav-item px-3">
+            @{
+                var checkString22 = baseUrl + "/system-administration-dashborad";
+                var checkString23 = baseUrl + "/academic-years-list";
+            }
+            <NavLink class="nav-link" href="/system-administration-dashborad">
+                <div class="align-items: center">
+                    <span class="bi bi-list-ul" aria-hidden="true" style="font-size: 1.5em;"></span> System Administration
+                </div>
+            </NavLink>
+            @if (currentUrl == checkString22 || currentUrl == checkString23)
+            {
+                <div class="nav-item px-3">
+                    <NavLink class="nav-link" href="academic-years-list">
+                        <div class="align-items: center">
+                            <span class="bi bi-calendar3" aria-hidden="true" style="font-size: 1.5em;"></span> Academic Years
+                        </div>
+                    </NavLink>
+                </div>
+            }
+        </div>
+
+        <div class="nav-item px-3">
+            @{
+                var checkString24 = baseUrl + "/scaffold-dashborad";
+                var checkString25 = baseUrl + "/counter";
+                var checkString26 = baseUrl + "/weather";
+                var checkString27 = baseUrl + "/auth";
+                var checkString28 = baseUrl + "/Account/Manage";
+                var checkString29 = baseUrl + "/Account/Register";
+                var checkString30 = baseUrl + "/Account/Login";
+            }
+            <NavLink class="nav-link" href="/scaffold-dashborad">
+                <div class="align-items: center">
+                    <span class="bi bi-list-ul" aria-hidden="true" style="font-size: 1.5em;"></span> Scaffold
+                </div>
+            </NavLink>
+            @if (currentUrl == checkString24 || currentUrl == checkString25 || currentUrl == checkString26 || currentUrl == checkString27 || currentUrl == checkString28 || currentUrl == checkString29 || currentUrl == checkString30)
+            {
+                <div class="nav-item px-3">
+                    <NavLink class="nav-link" href="counter">
+                        <span class="bi bi-plus-square-fill-nav-menu" aria-hidden="true"></span> Counter
+                    </NavLink>
+                </div>
+
+                <div class="nav-item px-3">
+                    <NavLink class="nav-link" href="weather">
+                        <span class="bi bi-list-nested-nav-menu" aria-hidden="true"></span> Weather
+                    </NavLink>
+                </div>
+
+                <div class="nav-item px-3">
+                    <NavLink class="nav-link" href="auth">
+                        <span class="bi bi-lock-nav-menu" aria-hidden="true"></span> Auth Required
+                    </NavLink>
+                </div>
+
+                <AuthorizeView>
+                    <Authorized>
+                        <div class="nav-item px-3">
+                            <NavLink class="nav-link" href="Account/Manage">
+                                <span class="bi bi-person-fill-nav-menu" aria-hidden="true"></span> @context.User.Identity?.Name
+                            </NavLink>
+                        </div>
+                        <div class="nav-item px-3">
+                            <form action="Account/Logout" method="post">
+                                <AntiforgeryToken />
+                                <input type="hidden" name="ReturnUrl" value="@currentUrl" />
+                                <button type="submit" class="nav-link">
+                                    <span class="bi bi-arrow-bar-left-nav-menu" aria-hidden="true"></span> Logout
+                                </button>
+                            </form>
+                        </div>
+                    </Authorized>
+                    <NotAuthorized>
+                        <div class="nav-item px-3">
+                            <NavLink class="nav-link" href="Account/Register">
+                                <span class="bi bi-person-nav-menu" aria-hidden="true"></span> Register
+                            </NavLink>
+                        </div>
+                        <div class="nav-item px-3">
+                            <NavLink class="nav-link" href="Account/Login">
+                                <span class="bi bi-person-badge-nav-menu" aria-hidden="true"></span> Login
+                            </NavLink>
+                        </div>
+                    </NotAuthorized>
+                </AuthorizeView>
+            }
+        </div>
+    </nav>
+</div>
+
+@code {
+    private bool collapseNavMenu = true;
+
+    private string? NavMenuCssClass => collapseNavMenu ? "collapse" : null;
+
+    private void ToggleNavMenu()
+    {
+        collapseNavMenu = !collapseNavMenu;
+    }
+}
